@@ -5,3 +5,7 @@
 * {
   scroll-behavior: smooth;
 }
+
+body {
+  font-family: "Source Code Pro Variable", sans-serif;
+}
