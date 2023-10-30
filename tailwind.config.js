@@ -5,14 +5,13 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#eca6a6",
-          hover: "#d49595",
+          DEFAULT: "#f95738",
         },
         bckg: {
-          DEFAULT: "#e2dea9",
+          DEFAULT: "#faf0ca",
         },
         txt: {
-          DEFAULT: "#3c5484",
+          DEFAULT: "#0d3b66",
         },
       },
     },

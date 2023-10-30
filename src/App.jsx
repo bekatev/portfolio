@@ -7,7 +7,7 @@ import Contact from './components/Contact'
 
 function App() {
   return (
-    <div className="App bg-bckg">
+    <div className="App bg-bckg pb-8">
       <Navbar />
       <Main />
       <Work />
