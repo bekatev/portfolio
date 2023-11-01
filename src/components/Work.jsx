@@ -16,7 +16,7 @@ const data = [
   },
   {
     year: "2016 - 2021",
-    title: "Physic teacher",
+    title: "Physics teacher",
     duration: "5 years",
     details: "IB course, Newton’s free school",
   },

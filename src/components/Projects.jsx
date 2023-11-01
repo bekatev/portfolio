@@ -11,8 +11,10 @@ const Projects = () => {
       id="projects"
       className="sm:max-w-[70vw] max-w-[90vw] m-auto p-4 bg-txt rounded-xl shadow-xl"
     >
-      <h1 className="text-4xl font-bold text-center text-white">My projects</h1>
-      <p className="py-8 text-white text-left px-4">
+      <h1 className="text-4xl font-bold text-center text-white pt-4">
+        My projects
+      </h1>
+      <p className="py-8 text-white text-left px-4 text-sm md:text-lg xl:text-lg">
         Throughout my journey in web development, I have passionately crafted
         and deployed a myriad of digital solutions. Here are some focal points:
         <ul>
