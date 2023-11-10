@@ -4,6 +4,8 @@ import spotify from "../assets/spotify.png";
 import quiz from "../assets/quiz.png";
 import straus from "../assets/straus.png";
 import magic from "../assets/magic.png";
+import caranea from "../assets/caranea.png";
+import verg from "../assets/verg.png";
 
 const Projects = () => {
   return (
@@ -51,6 +53,20 @@ const Projects = () => {
         new challenges and create more captivating digital solutions.
       </p>
       <div className="grid sm:grid-cols-2 gap-12">
+        <ProjectItem
+          img={verg}
+          title="Vergleich-mich.com"
+          link="vergleich-mich.com"
+          language="HTML/CSS/JS/PHP"
+          description="This is a real project, I did for the company that I work for now. I've used HTML/CSS/JS and little bit of PHP AJAX to send mails."
+        />
+        <ProjectItem
+          img={caranea}
+          title="caranea-mail.com"
+          link="caranea-mail.com"
+          language="HTML/CSS/JS/PHP"
+          description="Another real project for my company."
+        />
         <ProjectItem
           img={spotify}
           title="Spotify"
