@@ -10,9 +10,9 @@ function App() {
     <div className="App bg-bckg pb-8">
       <Navbar />
       <Main />
+      <Projects />
       <About />
       <Work />
-      <Projects />
       <Contact />
     </div>
   );
