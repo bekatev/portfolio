@@ -68,7 +68,7 @@ const Projects = () => {
           description="Easy project in Javascript."
         />
       </div>
-      <p className="py-8 text-white text-left px-4 text-sm md:text-lg xl:text-lg">
+      <p className="py-8 text-white text-left px-4 text-sm md:text-lg xl:text-lg mb-4">
         Throughout my journey in web development, I have passionately crafted
         and deployed a myriad of digital solutions. Here are some focal points:
         <ul>
