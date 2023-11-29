@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="sm:max-w-[70vw] max-w-[90vw] m-auto p-4 bg-txt rounded-xl shadow-xl"
+      className="sm:max-w-[70vw] max-w-[90vw] m-auto p-4 bg-txt rounded-xl shadow-xl mb-20"
     >
       <h1 className="text-4xl font-bold text-center text-white pb-8 pt-4">
         My projects
@@ -68,7 +68,7 @@ const Projects = () => {
           description="Easy project in Javascript."
         />
       </div>
-      <p className="py-8 text-white text-left px-4 text-sm md:text-lg xl:text-lg mb-4">
+      <p className="py-8 text-white text-left px-4 text-sm md:text-lg xl:text-lg">
         Throughout my journey in web development, I have passionately crafted
         and deployed a myriad of digital solutions. Here are some focal points:
         <ul>
