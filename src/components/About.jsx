@@ -19,9 +19,7 @@ const About = () => {
         My academic exposure to languages such as C++, Java, Matlab, and Wolfram
         Mathematica laid the groundwork for my transition into programming.
         Pursuing a further specialization, I undertook a rigorous 6-month course
-        in front-end web development. This decision marked my pivot from a
-        physics lecturer to fully immersing myself in the world of web
-        development.
+        in front-end web development.
       </p>
       <p className="py-1 sm:py-2 text-white text-sm md:text-lg xl:text-lg">
         In the subsequent years, I enriched my proficiency by tutoring
