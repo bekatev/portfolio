@@ -14,12 +14,6 @@ const data = [
     duration: "2 years",
     details: "IB course, Newton’s free school",
   },
-  {
-    year: "2016 - 2021",
-    title: "Physics teacher",
-    duration: "5 years",
-    details: "IB course, Newton’s free school",
-  },
 ];
 const Work = () => {
   return (

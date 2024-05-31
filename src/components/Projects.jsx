@@ -7,6 +7,7 @@ import magic from "../assets/magic.png";
 import caranea from "../assets/caranea.png";
 import verg from "../assets/verg.png";
 import mm from "../assets/mm.png";
+import bb from "../assets/bb.png";
 
 const Projects = () => {
   return (
@@ -19,11 +20,18 @@ const Projects = () => {
       </h1>
       <div className="grid sm:grid-cols-2 gap-12">
         <ProjectItem
+          img={bb}
+          title="my movies"
+          link="https://bazaarbay.netlify.app/"
+          language="Vue/Vite/Firebase/Tailwind"
+          description="This is BazaarBay, a Vue app, built with Vite, serves as a platform for users to sign up and log in using Firebase authentication. Once authenticated, users can add their products to sell, with Firebase serving as the backend to store product information. Styling is achieved with Tailwind CSS, providing a sleek and modern interface. The app is deployed and hosted on Netlify."
+        />
+        <ProjectItem
           img={mm}
           title="my movies"
           link="https://bekatevd-mm.netlify.app/"
-          language="React/Firebase/Tailwind"
-          description="This React application, built using Vite for enhanced performance, features a user-friendly interface for registration and sign-in, powered by Firebase Authentication. It leverages Firestore database to manage personalized movie lists for each user. Post-login, users can search for movies and customize their lists, which are accessible on their profiles. The design employs Tailwind CSS for a responsive and attractive layout. Hosted on Netlify with continuous deployment from GitHub, the app offers reliable access and a seamless user experience."
+          language="React/Vite/Firebase/Tailwind"
+          description="This React app, built with Vite for speed, has a friendly interface for signing up and logging in, thanks to Firebase Authentication. It uses Firestore to handle personalized movie lists. Once in, users can search and tweak their lists, all on their profiles. It's styled with Tailwind CSS for a slick look. And it's up on Netlify, with updates from GitHub, for smooth sailing."
         />
         <ProjectItem
           img={verg}
@@ -69,40 +77,43 @@ const Projects = () => {
         />
       </div>
       <p className="py-8 text-white text-left px-4 text-sm md:text-lg xl:text-lg">
-        Throughout my journey in web development, I have passionately crafted
-        and deployed a myriad of digital solutions. Here are some focal points:
+        In my journey through web development, I've crafted and launched a bunch
+        of digital solutions. Here are some highlights:
         <ul>
           <li className="py-6">
-            <b className="text-primary">React.js:</b> As my primary tool, I've
-            harnessed the power of React.js to build interactive user
-            interfaces, seamlessly integrating state management, hooks, and
-            other advanced features to deliver optimal web experiences.
+            <b className="text-primary">React.js:</b> I mostly use React,
+            crafting interactive user interfaces, utilizing state management,
+            hooks, and advanced features to deliver optimal web experiences.
           </li>
           <li className="py-6">
-            <b className="text-primary">HTML & CSS:</b> Proficient in
-            structuring and styling web interfaces, ensuring optimal user
-            experience and responsiveness.
+            <b className="text-primary">Vue.js:</b> Along with React I think
+            Vue.js is very fast and easy for building dynamic web applications,
+            leveraging its simplicity and power to create seamless user
+            experiences.
           </li>
           <li className="py-6">
-            <b className="text-primary">JavaScript (JS):</b> Beyond React, I
-            have a demonstrated aptitude in implementing dynamic
-            functionalities, creating seamless interactivity across web
-            platforms.
+            <b className="text-primary">Laravel & PHP:</b> I have experience in
+            developing robust back-end functionalities with Laravel and PHP,
+            facilitating seamless data interactions and ensuring the security of
+            web applications.
+          </li>
+          <li className="py-6">
+            <b className="text-primary">HTML & CSS:</b> Basics are very
+            important too for structuring and styling web interfaces, ensuring
+            optimal user experience and responsiveness across devices.
+          </li>
+          <li className="py-6">
+            <b className="text-primary">JavaScript (JS):</b> Beyond frameworks,
+            I've demonstrated aptitude in implementing dynamic functionalities
+            and enhancing interactivity across web platforms.
           </li>
           <li className="py-6">
             <b className="text-primary">Tailwind & Bootstrap:</b> Leveraged
             these CSS frameworks to rapidly design and refine user interfaces,
-            ensuring a consistent and modern user experience.
-          </li>
-          <li className="py-6">
-            <b className="text-primary">PHP, MySQL:</b> Applied this server-side
-            scripting language in numerous projects, developing robust back-end
-            functionalities and facilitating seamless data interactions.
+            ensuring a consistent and modern user experience. I love Tailwind
+            and mostly use it for everything.
           </li>
         </ul>
-        By intertwining these technologies, I've managed to curate web
-        experiences that resonate with users. I'm eager to bring my expertise to
-        new challenges and create more captivating digital solutions.
       </p>
     </div>
   );

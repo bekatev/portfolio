@@ -23,7 +23,7 @@ const Main = () => {
             sequence={[
               "Beka Tevdorashvili",
               1000,
-              "React Front-end Developer.",
+              "Front-end Developer.",
               1000,
             ]}
             wrapper="div"
@@ -35,7 +35,7 @@ const Main = () => {
         <Lottie animationData={animationData} className="w-96" />
         <div className="flex flex-row justify-between pt-6 max-w-[500px] w-full px-4">
           <p>
-            <b>Mobile:</b> 591242873
+            <b>Mobile:</b> 591 24 28 73
           </p>
           <p>
             <b>Email:</b> bekatevd@gmail.com
