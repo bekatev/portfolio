@@ -35,7 +35,7 @@ const Main = () => {
         <Lottie animationData={animationData} className="w-96" />
         <div className="flex flex-row justify-between pt-6 max-w-[500px] w-full px-4">
           <p>
-            <b>Mobile:</b> 591 24 28 73
+            <b>Mobile:</b> 591242873
           </p>
           <p>
             <b>Email:</b> bekatevd@gmail.com
