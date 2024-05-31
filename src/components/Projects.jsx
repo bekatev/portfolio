@@ -31,7 +31,7 @@ const Projects = () => {
           title="my movies"
           link="https://bekatevd-mm.netlify.app/"
           language="React/Vite/Firebase/Tailwind"
-          description="This React app, built with Vite for speed, has a friendly interface for signing up and logging in, thanks to Firebase Authentication. It uses Firestore to handle personalized movie lists. Once in, users can search and tweak their lists, all on their profiles. It's styled with Tailwind CSS for a slick look. And it's up on Netlify, with updates from GitHub, for smooth sailing."
+          description="This React app, built with Vite for speed, has a friendly interface for signing up and logging in, thanks to Firebase Authentication. I've used OMDB API to fetch the movie list. Used Firestore to handle personalized movie lists. Once in, users can search and tweak their lists, all on their profiles. It's styled with Tailwind CSS for a slick look. And it's up on Netlify, with updates from GitHub, for smooth sailing."
         />
         <ProjectItem
           img={verg}
