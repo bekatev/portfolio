@@ -4,7 +4,7 @@ import Modal from "./Modal";
 const ProjectItem = ({ img, title, link, language, description }) => {
   return (
     <div className="flex flex-col">
-      <a href={link} target="{link}Window">
+      <a href={link} target="_blank" rel="noopener noreferrer">
         <div className="relative flex items-center justify-center h-auto w-full rounded-t-xl group hover:bg-white/[.60]">
           <img
             src={img}
