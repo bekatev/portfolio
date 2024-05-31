@@ -27,7 +27,7 @@ const Navbar = () => {
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursor-pointer transform hover:scale-110 ease-in duration-100"
           >
             <Lottie animationData={homeData} className="w-8" />
-            <span className="pl-4 text-white">Home</span>
+            <span className="pl-4 text-bckg">Home</span>
           </a>
           <a
             onClick={handleNav}
@@ -35,7 +35,7 @@ const Navbar = () => {
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <Lottie animationData={projectsData} className="w-8" />
-            <span className="pl-4 text-white">Projects</span>
+            <span className="pl-4 text-bckg">Projects</span>
           </a>
           <a
             onClick={handleNav}
@@ -43,7 +43,7 @@ const Navbar = () => {
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursor-pointer transform hover:scale-110 ease-in duration-100"
           >
             <Lottie animationData={aboutData} className="w-8" />
-            <span className="pl-4 text-white">About me</span>
+            <span className="pl-4 text-bckg">About me</span>
           </a>
 
           <a
@@ -52,7 +52,7 @@ const Navbar = () => {
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <Lottie animationData={jobsData} className="w-8" />
-            <span className="pl-4 text-white">Jobs</span>
+            <span className="pl-4 text-bckg">Jobs</span>
           </a>
           <a
             onClick={handleNav}
@@ -60,7 +60,7 @@ const Navbar = () => {
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <Lottie animationData={contactData} className="w-8" />
-            <span className="pl-4 text-white">Contact</span>
+            <span className="pl-4 text-bckg">Contact</span>
           </a>
         </div>
       ) : (
@@ -74,35 +74,35 @@ const Navbar = () => {
             className="shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursos-pointer transform transition duration-500 hover:scale-110 flex flex-row xl:w-40 w-fit"
           >
             <Lottie animationData={homeData} className="w-8" />
-            <span className="pl-4 xl:block hidden text-white">Home</span>
+            <span className="pl-4 xl:block hidden text-bckg">Home</span>
           </a>
           <a
             href="#projects"
             className="shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursos-pointer transform transition duration-500 hover:scale-110 flex flex-row xl:w-40 w-fit"
           >
             <Lottie animationData={projectsData} className="w-8" />
-            <span className="pl-4 xl:block hidden text-white">Projects</span>
+            <span className="pl-4 xl:block hidden text-bckg">Projects</span>
           </a>
           <a
             href="#about"
             className="shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursos-pointer transform transition duration-500 hover:scale-110 flex flex-row xl:w-40 w-fit"
           >
             <Lottie animationData={aboutData} className="w-8" />
-            <span className="pl-4 xl:block hidden text-white">About Me</span>
+            <span className="pl-4 xl:block hidden text-bckg">About Me</span>
           </a>
           <a
             href="#work"
             className="shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursos-pointer transform transition duration-500 hover:scale-110 flex flex-row xl:w-40 w-fit"
           >
             <Lottie animationData={jobsData} className="w-8" />
-            <span className="pl-4 xl:block hidden text-white">Jobs</span>
+            <span className="pl-4 xl:block hidden text-bckg">Jobs</span>
           </a>
           <a
             href="#contact"
             className="shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursos-pointer transform transition duration-500 hover:scale-110 flex flex-row xl:w-40 w-fit"
           >
             <Lottie animationData={contactData} className="w-8" />
-            <span className="pl-4 xl:block hidden text-white">Contact</span>
+            <span className="pl-4 xl:block hidden text-bckg">Contact</span>
           </a>
         </div>
       </div>

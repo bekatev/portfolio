@@ -13,9 +13,9 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="sm:max-w-[70vw] max-w-[90vw] m-auto p-4 bg-txt rounded-xl shadow-xl mb-20"
+      className="sm:max-w-[70vw] max-w-[90vw] m-auto p-4 bg-primary rounded-xl shadow-xl mb-20"
     >
-      <h1 className="text-4xl font-bold text-center text-white pb-8 pt-4">
+      <h1 className="text-4xl font-bold text-center text-bckg pb-8 pt-4">
         My projects
       </h1>
       <div className="grid sm:grid-cols-2 gap-12">
@@ -76,40 +76,40 @@ const Projects = () => {
           description="Easy project in Javascript."
         />
       </div>
-      <p className="py-8 text-white text-left px-4 text-sm md:text-lg xl:text-lg">
+      <p className="py-8 text-bckg text-left px-4 text-sm md:text-lg xl:text-lg">
         In my journey through web development, I've crafted and launched a bunch
         of digital solutions. Here are some highlights:
         <ul>
           <li className="py-6">
-            <b className="text-primary">React.js:</b> I mostly use React,
-            crafting interactive user interfaces, utilizing state management,
-            hooks, and advanced features to deliver optimal web experiences.
+            <b className="text-bttn">React.js:</b> I mostly use React, crafting
+            interactive user interfaces, utilizing state management, hooks, and
+            advanced features to deliver optimal web experiences.
           </li>
           <li className="py-6">
-            <b className="text-primary">Vue.js:</b> Along with React I think
-            Vue.js is very fast and easy for building dynamic web applications,
+            <b className="text-bttn">Vue.js:</b> Along with React I think Vue.js
+            is very fast and easy for building dynamic web applications,
             leveraging its simplicity and power to create seamless user
             experiences.
           </li>
           <li className="py-6">
-            <b className="text-primary">Laravel & PHP:</b> I have experience in
+            <b className="text-bttn">Laravel & PHP:</b> I have experience in
             developing robust back-end functionalities with Laravel and PHP,
             facilitating seamless data interactions and ensuring the security of
             web applications.
           </li>
           <li className="py-6">
-            <b className="text-primary">HTML & CSS:</b> Basics are very
-            important too for structuring and styling web interfaces, ensuring
-            optimal user experience and responsiveness across devices.
+            <b className="text-bttn">HTML & CSS:</b> Basics are very important
+            too for structuring and styling web interfaces, ensuring optimal
+            user experience and responsiveness across devices.
           </li>
           <li className="py-6">
-            <b className="text-primary">JavaScript (JS):</b> Beyond frameworks,
+            <b className="text-bttn">JavaScript (JS):</b> Beyond frameworks,
             I've demonstrated aptitude in implementing dynamic functionalities
             and enhancing interactivity across web platforms.
           </li>
           <li className="py-6">
-            <b className="text-primary">Tailwind & Bootstrap:</b> Leveraged
-            these CSS frameworks to rapidly design and refine user interfaces,
+            <b className="text-bttn">Tailwind & Bootstrap:</b> Leveraged these
+            CSS frameworks to rapidly design and refine user interfaces,
             ensuring a consistent and modern user experience. I love Tailwind
             and mostly use it for everything.
           </li>
