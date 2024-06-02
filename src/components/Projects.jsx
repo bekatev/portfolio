@@ -77,8 +77,6 @@ const Projects = () => {
         />
       </div>
       <p className="py-8 text-bckg text-left px-4 text-sm md:text-lg xl:text-lg">
-        In my journey through web development, I've crafted and launched a bunch
-        of digital solutions. Here are some highlights:
         <ul>
           <li className="py-6">
             <b className="text-bttn">React.js:</b> I mostly use React, crafting
