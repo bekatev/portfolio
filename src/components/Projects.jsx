@@ -20,13 +20,6 @@ const Projects = () => {
       </h1>
       <div className="grid sm:grid-cols-2 gap-12">
         <ProjectItem
-          img={bb}
-          title="BazaarBay"
-          link="https://bazaarbay.netlify.app/"
-          language="Vue/Vite/Firebase/Tailwind"
-          description="This is BazaarBay, a Vue app, built with Vite, serves as a platform for users to sign up and log in using Firebase authentication. Once authenticated, users can add their products to sell, with Firebase serving as the backend to store product information. Styling is achieved with Tailwind CSS, providing a sleek and modern interface. The app is deployed and hosted on Netlify."
-        />
-        <ProjectItem
           img={mm}
           title="my movies"
           link="https://bb-mymovie.netlify.app/"
