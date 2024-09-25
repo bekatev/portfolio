@@ -7,25 +7,26 @@ const About = () => {
       className="sm:max-w-[70vw] max-w-[90vw] m-auto sm:p-12 p-8 bg-primary rounded-xl shadow-xl"
     >
       <p className="py-1 sm:py-2 text-bckg text-sm md:text-lg xl:text-lg">
-        With a robust programming foundation and four years of hands-on
-        experience as a front-end web developer, I've continuously refined my
-        skills to deliver efficient and polished web solutions.
+        For the past few years, I’ve had the opportunity to work remotely as a
+        front-end developer for a German company. This experience has been
+        transformative, allowing me to hone my skills in React, Node.js,
+        Tailwind CSS, etc. Working remotely taught me the importance of clear
+        communication, time management, and being self-sufficient. Despite the
+        physical distance, I’ve collaborated with international teams to build
+        user-friendly, responsive web applications that deliver great
+        experiences.
       </p>
       <p className="py-1 sm:py-2 text-bckg text-sm md:text-lg xl:text-lg">
-        In addition to honing my skills through tutoring JavaScript and various
-        front-end roles, I've spent over three years with a fully remote German
-        company as a front-end developer. This experience underscores my
-        adaptability and dedication to delivering results in dynamic work
-        environments.
+        I spent two years tutoring JavaScript, which not only deepened my
+        understanding of the language but also gave me a passion for helping
+        others learn. Guiding students through their coding journeys reinforced
+        the importance of writing clean, efficient code and solidified my own
+        skills.
       </p>
       <p className="py-1 sm:py-2 text-bckg text-sm md:text-lg xl:text-lg">
-        My main tools of choice include React and Vue, complemented by Tailwind
-        CSS for streamlined styling. These technologies have been instrumental
-        in crafting sophisticated and user-friendly interfaces.
-      </p>
-      <p className="py-1 sm:py-2 text-bckg text-sm md:text-lg xl:text-lg">
-        Driven by a genuine passion for web development, I'm always eager to
-        deepen my expertise and stay abreast of the latest industry trends.
+        These experiences have shaped me into a developer who values both
+        technical expertise and teamwork, always striving to create applications
+        that are functional, beautiful, and accessible.
       </p>
     </div>
   );
