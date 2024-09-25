@@ -14,7 +14,8 @@ const About = () => {
         communication, time management, and being self-sufficient. Despite the
         physical distance, I’ve collaborated with international teams to build
         user-friendly, responsive web applications that deliver great
-        experiences.
+        experiences. I'd like to continue learning and have more experiences
+        with great teams.
       </p>
       <p className="py-1 sm:py-2 text-bckg text-sm md:text-lg xl:text-lg">
         I spent two years tutoring JavaScript, which not only deepened my
