@@ -27,6 +27,13 @@ const Projects = () => {
           description="This React app, built with Vite for speed, has a friendly interface for signing up and logging in, thanks to Firebase Authentication. I've used OMDB API to fetch the movie list. Used Firestore to handle personalized movie lists. Once in, users can search and tweak their lists, all on their profiles. It's styled with Tailwind CSS for a slick look. And it's up on Netlify, with updates from GitHub, for smooth sailing."
         />
         <ProjectItem
+          img={bb}
+          title="my movies"
+          link="https://bazaarbay-bt.netlify.app/"
+          language="Vue/Vite/Firebase/Tailwind"
+          description="This is a modern e-commerce web application built with Vue.js and Vite for a fast and responsive user experience. Styled with Tailwind CSS, the site offers a sleek and clean design that is fully responsive across all devices. The application integrates Firebase for authentication, database, and storage, making it highly secure and scalable."
+        />
+        <ProjectItem
           img={verg}
           title="Vergleich-mich.com"
           link="https://vergleich-mich.com/"
