@@ -20,21 +20,21 @@ const Projects = () => {
       <h1 className="text-4xl font-bold text-center text-bckg pb-8 pt-4">
         My projects
       </h1>
-      <ProjectItem
-        img={lh}
-        title="LeadHub"
-        link="https://www.leadhub.software/"
-        language="Node, Pug, Tailwind"
-        description="I contributed to the development of Leadhub Software, a modern website built using Node.js, Pug, and Tailwind CSS. My role involved designing and implementing efficient backend solutions with Node.js, ensuring fast and scalable performance. I leveraged Pug for streamlined template rendering and Tailwind CSS to deliver a clean, responsive, and visually appealing user interface. This project enhanced my ability to integrate cutting-edge technologies to meet business requirements effectively."
-      />
-      <ProjectItem
-        img={bs}
-        title="B-Social"
-        link="https://bekatev.github.io/b-social/"
-        language="React/Vite/Firebase/MUI"
-        description="B-Social is a lightweight, discussion-focused web application inspired by platforms like Reddit. It allows users to create and share topics, engage in meaningful conversations through comments, and connect over shared interests. This project showcases advanced skills in React development, Firebase integration, and Material-UI styling. It demonstrates how to build scalable, interactive, and visually appealing web applications."
-      />
       <div className="grid sm:grid-cols-2 gap-12">
+        <ProjectItem
+          img={lh}
+          title="LeadHub"
+          link="https://www.leadhub.software/"
+          language="Node, Pug, Tailwind"
+          description="I contributed to the development of Leadhub Software, a modern website built using Node.js, Pug, and Tailwind CSS. My role involved designing and implementing efficient backend solutions with Node.js, ensuring fast and scalable performance. I leveraged Pug for streamlined template rendering and Tailwind CSS to deliver a clean, responsive, and visually appealing user interface. This project enhanced my ability to integrate cutting-edge technologies to meet business requirements effectively."
+        />
+        <ProjectItem
+          img={bs}
+          title="B-Social"
+          link="https://bekatev.github.io/b-social/"
+          language="React/Vite/Firebase/MUI"
+          description="B-Social is a lightweight, discussion-focused web application inspired by platforms like Reddit. It allows users to create and share topics, engage in meaningful conversations through comments, and connect over shared interests. This project showcases advanced skills in React development, Firebase integration, and Material-UI styling. It demonstrates how to build scalable, interactive, and visually appealing web applications."
+        />
         <ProjectItem
           img={mm}
           title="MyMovie"
