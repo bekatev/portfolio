@@ -18,7 +18,7 @@ const Main = () => {
         <h1 className="text-2xl md:text-4xl xl:text-5xl text-bckg text-center">
           Hello, I'm Beka
         </h1>
-        <h2 className="text-lg md:text-xl xl:text-2xl text-bckg text-left mt-2">
+        <h2 className="text-lg md:text-xl xl:text-2xl text-bckg text-center mt-2">
           A Front-End Web Developer with 4+ Years of Experience
         </h2>
         <Lottie animationData={animationData} className="w-96" />
