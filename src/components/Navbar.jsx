@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Lottie from "lottie-react";
 import homeData from "../assets/home.json";
 import jobsData from "../assets/jobs.json";
@@ -15,11 +15,20 @@ const Navbar = () => {
 
   return (
     <div>
-      <AiOutlineMenu
+      {/* Toggle Menu Button */}
+      <div
+        className="absolute top-4 right-4 z-[99] md:hidden cursor-pointer text-primary"
         onClick={handleNav}
-        className="absolute top-4 right-4 z-[99] md:hidden cursor-pointer text-bttn"
-      />
-      {nav ? (
+      >
+        {nav ? (
+          <AiOutlineClose className="text-2xl text-bckg" />
+        ) : (
+          <AiOutlineMenu className="text-2xl text-bckg" />
+        )}
+      </div>
+
+      {/* Mobile Navigation */}
+      {nav && (
         <div className="fixed w-full h-screen bg-white/75 flex flex-col justify-center items-center z-20">
           <a
             onClick={handleNav}
@@ -45,7 +54,6 @@ const Navbar = () => {
             <Lottie animationData={aboutData} className="w-8" />
             <span className="pl-4 text-bckg">About me</span>
           </a>
-
           <a
             onClick={handleNav}
             href="#work"
@@ -63,10 +71,9 @@ const Navbar = () => {
             <span className="pl-4 text-bckg">Contact</span>
           </a>
         </div>
-      ) : (
-        ""
       )}
 
+      {/* Desktop Navigation */}
       <div className="md:block hidden fixed top-[25%] z-10">
         <div className="flex flex-col">
           <a
