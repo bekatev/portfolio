@@ -16,21 +16,10 @@ const Main = () => {
       <div className="w-11/12 h-screen object-cover bg-bckg" />
       <div className="sm:max-w-[70vw] max-w-[90vw] max-h-[600px] m-auto h-full w-full bg-primary flex flex-col justify-center items-center absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 rounded-xl shadow-xl">
         <h1 className="text-2xl md:text-4xl xl:text-5xl text-bckg text-center">
-          Hello, I'm
+          Hello, I'm Beka
         </h1>
-        <h2 className="flex text-lg md:text-xl xl:text-3xl text-bckg">
-          <TypeAnimation
-            sequence={[
-              "Beka Tevdorashvili",
-              1000,
-              "Front-end Developer.",
-              1000,
-            ]}
-            wrapper="div"
-            speed={50}
-            style={{ fontSize: "1em", paddingLeft: "5px" }}
-            repeat={Infinity}
-          />
+        <h2 className="text-lg md:text-2xl xl:text-3xl text-bckg text-left">
+          A Front-End Web Developer with 4+ Years of Experience
         </h2>
         <Lottie animationData={animationData} className="w-96" />
         <div className="flex flex-row justify-between pt-6 max-w-[500px] w-full px-4">
