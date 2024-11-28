@@ -5,7 +5,7 @@ const data = [
   {
     year: "2020 - ",
     title: "Front End Developer",
-    duration: "3 years",
+    duration: "4 years",
     details: "NeoWeb, Germany (Remote)",
   },
   {
