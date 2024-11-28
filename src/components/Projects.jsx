@@ -8,6 +8,8 @@ import caranea from "../assets/caranea.png";
 import verg from "../assets/verg.png";
 import mm from "../assets/mm.png";
 import bb from "../assets/bb.png";
+import bs from "../assets/bs.png";
+import lh from "../assets/lh.png";
 
 const Projects = () => {
   return (
@@ -18,18 +20,32 @@ const Projects = () => {
       <h1 className="text-4xl font-bold text-center text-bckg pb-8 pt-4">
         My projects
       </h1>
+      <ProjectItem
+        img={lh}
+        title="LeadHub"
+        link="https://www.leadhub.software/"
+        language="Node, Pug, Tailwind"
+        description="I contributed to the development of Leadhub Software, a modern website built using Node.js, Pug, and Tailwind CSS. My role involved designing and implementing efficient backend solutions with Node.js, ensuring fast and scalable performance. I leveraged Pug for streamlined template rendering and Tailwind CSS to deliver a clean, responsive, and visually appealing user interface. This project enhanced my ability to integrate cutting-edge technologies to meet business requirements effectively."
+      />
+      <ProjectItem
+        img={bs}
+        title="B-Social"
+        link="https://bekatev.github.io/b-social/"
+        language="React/Vite/Firebase/MUI"
+        description="B-Social is a lightweight, discussion-focused web application inspired by platforms like Reddit. It allows users to create and share topics, engage in meaningful conversations through comments, and connect over shared interests. This project showcases advanced skills in React development, Firebase integration, and Material-UI styling. It demonstrates how to build scalable, interactive, and visually appealing web applications."
+      />
       <div className="grid sm:grid-cols-2 gap-12">
         <ProjectItem
           img={mm}
-          title="my movies"
-          link="https://bb-mymovie.netlify.app/"
+          title="MyMovie"
+          link="https://bekatev.github.io/mymovie/home"
           language="React/Vite/Firebase/Tailwind"
           description="This React app, built with Vite for speed, has a friendly interface for signing up and logging in, thanks to Firebase Authentication. I've used OMDB API to fetch the movie list. Used Firestore to handle personalized movie lists. Once in, users can search and tweak their lists, all on their profiles. It's styled with Tailwind CSS for a slick look. And it's up on Netlify, with updates from GitHub, for smooth sailing."
         />
         <ProjectItem
           img={bb}
-          title="my movies"
-          link="https://bazaarbay-bt.netlify.app/"
+          title="Bazaarbay"
+          link="https://bekatev.github.io/b-store-vue/"
           language="Vue/Vite/Firebase/Tailwind"
           description="This is a modern e-commerce web application built with Vue.js and Vite for a fast and responsive user experience. Styled with Tailwind CSS, the site offers a sleek and clean design that is fully responsive across all devices. The application integrates Firebase for authentication, database, and storage, making it highly secure and scalable."
         />
@@ -46,34 +62,6 @@ const Projects = () => {
           link="https://caranea-mail.com/"
           language="HTML/CSS/JS/PHP"
           description="Another real project for my company."
-        />
-        <ProjectItem
-          img={spotify}
-          title="Spotify"
-          link="https://bekatev.github.io/spotify/"
-          language="HTML/CSS/JS/PHP"
-          description="In this project, I aimed to design an exact copy of the official Spotify website. Styling it was my ultimate challenge as I tried to duplicate the exact same design. I only use a little bit of javascript here. I used PHP for Login and Sign Up pages, though github is not showing those pages you can access the code on my github page."
-        />
-        <ProjectItem
-          img={quiz}
-          title="Quiz App"
-          link="https://bekatev.github.io/Quiz/"
-          language="HTML/CSS/JS"
-          description="This project mostly focuses on javascript and the functionality of the page. The user is asked to enter his/her name and is given 10 questions. He/she can skip the questions and go back later, or choose the answer but get back to it later as well. The quiz has a 1 min time (for testing) and a timer is shown in the question box. After finishing the quiz user is assessed according to the points that he/she got. There is another version of that project on my github page, where I added some PHP to save the user's name and mark in the database."
-        />
-        <ProjectItem
-          img={straus}
-          title="Straus"
-          link="https://bekatev.github.io/straus/"
-          language="HTML/CSS/JS/PHP"
-          description="This project is an analogy to the Wix webpage with responsive design."
-        />
-        <ProjectItem
-          img={magic}
-          title="Magic 8 Ball"
-          link="https://bekatev.github.io/Magic%208%20Ball/"
-          language="HTML/CSS/JS"
-          description="Easy project in Javascript."
         />
       </div>
       <p className="py-8 text-bckg text-left px-4 text-sm md:text-lg xl:text-lg">
@@ -106,8 +94,8 @@ const Projects = () => {
             and enhancing interactivity across web platforms.
           </li>
           <li className="py-6">
-            <b className="text-bttn">Tailwind & Bootstrap:</b> Leveraged these
-            CSS frameworks to rapidly design and refine user interfaces,
+            <b className="text-bttn">Tailwind, MUI& Bootstrap:</b> Leveraged
+            these CSS frameworks to rapidly design and refine user interfaces,
             ensuring a consistent and modern user experience. I love Tailwind
             and mostly use it for everything.
           </li>
