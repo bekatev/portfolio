@@ -11,11 +11,11 @@ const WorkItem = ({ year, title, duration, details }) => {
               {year}
             </span>
             <span className="text-lg font-semibold text-primary">{title}</span>
-            <span className="my-1 text-sm font-normal leading-none text-primary">
+            <span className="my-1 text-sm font-normal leading-none text-bttn">
               {duration}
             </span>
           </p>
-          <p className="my-2 text-base font-normal text-bttn">{details}</p>
+          <p className="my-2 text-base text-bttn font-semibold">{details}</p>
         </li>
       </ol>
     </div>
