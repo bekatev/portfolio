@@ -10,7 +10,7 @@ const WorkItem = ({ year, title, duration, details }) => {
             <span className="inline-block px-2 py-1 font-semibold text-white bg-primary rounded-md">
               {year}
             </span>
-            <span className="text-lg font-semibold text-primary">{title}</span>
+            <span className="text-lg font-semibold text-bttn">{title}</span>
             <span className="my-1 text-sm font-normal leading-none text-bttn">
               {duration}
             </span>
