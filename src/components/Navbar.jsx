@@ -8,9 +8,9 @@ import contactData from "../assets/contact.json";
 import aboutData from "../assets/me.json";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
+  const [nav, setNav] = useState(false); // State to toggle menu open/closed
   const handleNav = () => {
-    setNav(!nav);
+    setNav(!nav); // Toggle the menu state
   };
 
   return (
@@ -20,10 +20,11 @@ const Navbar = () => {
         className="absolute top-4 right-4 z-[99] md:hidden cursor-pointer text-primary"
         onClick={handleNav}
       >
+        {/* Conditional Rendering of Hamburger or Close Icon */}
         {nav ? (
-          <AiOutlineClose className="text-2xl text-bckg" />
+          <AiOutlineClose className="text-2xl text-bckg" /> // "X" icon when menu is open
         ) : (
-          <AiOutlineMenu className="text-2xl text-bckg" />
+          <AiOutlineMenu className="text-2xl text-bckg" /> // Hamburger icon when menu is closed
         )}
       </div>
 
