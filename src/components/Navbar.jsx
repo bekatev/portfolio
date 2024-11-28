@@ -22,9 +22,9 @@ const Navbar = () => {
       >
         {/* Conditional Rendering of Hamburger or Close Icon */}
         {nav ? (
-          <AiOutlineClose className="text-2xl text-primary" /> // "X" icon when menu is open
+          <AiOutlineClose className="text-2xl text-bckg" /> // "X" icon when menu is open
         ) : (
-          <AiOutlineMenu className="text-2xl text-bckg" /> // Hamburger icon when menu is closed
+          <AiOutlineMenu className="text-2xl text-primary" /> // Hamburger icon when menu is closed
         )}
       </div>
 
