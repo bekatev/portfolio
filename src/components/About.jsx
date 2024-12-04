@@ -8,10 +8,9 @@ const About = () => {
     >
       <p className="py-1 sm:py-2 text-bckg text-sm md:text-lg xl:text-lg">
         Over the past 4+ years, I've worked remotely as a front-end developer
-        for a German company, gaining experience with React, Node.js, Tailwind
-        CSS, and more. This role taught me the value of clear communication,
-        time management, and collaboration with international teams to build
-        responsive web apps.
+        for a German company.. This role taught me the value of clear
+        communication, time management, and collaboration with international
+        teams to build responsive web apps.
       </p>
       <p className="py-1 sm:py-2 text-bckg text-sm md:text-lg xl:text-lg">
         I'm always eager to grow as a developer, learning new technologies and
