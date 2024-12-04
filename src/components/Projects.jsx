@@ -25,7 +25,7 @@ const Projects = () => {
           img={lh}
           title="LeadHub"
           link="https://www.leadhub.software/"
-          language="Node, Pug, Tailwind"
+          language="Node/Pug/Tailwind"
           description="I contributed to the development of Leadhub Software, a modern website built using Node.js, Pug, and Tailwind CSS. My role involved designing and implementing efficient backend solutions with Node.js, ensuring fast and scalable performance. I leveraged Pug for streamlined template rendering and Tailwind CSS to deliver a clean, responsive, and visually appealing user interface. This project enhanced my ability to integrate cutting-edge technologies to meet business requirements effectively."
         />
         <ProjectItem
@@ -67,34 +67,19 @@ const Projects = () => {
       <p className="py-8 text-bckg text-left px-4 text-sm md:text-lg xl:text-lg">
         <ul>
           <li className="py-6">
-            <b className="text-bttn">React.js:</b> I mostly use React, crafting
-            interactive user interfaces, utilizing state management, hooks, and
-            advanced features to deliver optimal web experiences.
+            <b className="text-bttn">React, React Native, Vue:</b> Proficient in
+            building scalable web and mobile applications using React and React
+            Native, with expertise in hooks, state management, and API
+            integration. Experienced with Vue.js for developing modular,
+            high-performing interfaces tailored to business needs.
           </li>
           <li className="py-6">
-            <b className="text-bttn">Vue.js:</b> Along with React I think Vue.js
-            is very fast and easy for building dynamic web applications,
-            leveraging its simplicity and power to create seamless user
-            experiences.
+            <b className="text-bttn">HTML, CSS, JS:</b> Basics are very
+            important too for structuring and styling web interfaces, ensuring
+            optimal user experience and responsiveness across devices.
           </li>
           <li className="py-6">
-            <b className="text-bttn">Laravel & PHP:</b> I have experience in
-            developing robust back-end functionalities with Laravel and PHP,
-            facilitating seamless data interactions and ensuring the security of
-            web applications.
-          </li>
-          <li className="py-6">
-            <b className="text-bttn">HTML & CSS:</b> Basics are very important
-            too for structuring and styling web interfaces, ensuring optimal
-            user experience and responsiveness across devices.
-          </li>
-          <li className="py-6">
-            <b className="text-bttn">JavaScript (JS):</b> Beyond frameworks,
-            I've demonstrated aptitude in implementing dynamic functionalities
-            and enhancing interactivity across web platforms.
-          </li>
-          <li className="py-6">
-            <b className="text-bttn">Tailwind, MUI& Bootstrap:</b> Leveraged
+            <b className="text-bttn">Tailwind, MUI & Bootstrap:</b> Leveraged
             these CSS frameworks to rapidly design and refine user interfaces,
             ensuring a consistent and modern user experience. I love Tailwind
             and mostly use it for everything.
