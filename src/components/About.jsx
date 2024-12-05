@@ -8,8 +8,10 @@ const About = () => {
     >
       <p className="py-1 sm:py-2 text-bckg text-sm md:text-lg xl:text-lg">
         Over the past 4+ years, I've worked remotely as a front-end developer
-        for a German company.. Being a bachelor of physics from Free University
-        of Tbilisi, this role taught me the value of clear communication, time
+        for a German company.. Being a Bachelor of Physics graduate from the
+        Free University of Tbilisi, I began learning web development in my early
+        years and decided to shift my professional direction toward front-end
+        development.. My jobs taught me the value of clear communication, time
         management, and collaboration with international teams to build
         responsive web apps.
       </p>
