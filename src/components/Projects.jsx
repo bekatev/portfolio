@@ -84,6 +84,13 @@ const Projects = () => {
             ensuring a consistent and modern user experience. I love Tailwind
             and mostly use it for everything.
           </li>
+          <li className="py-6">
+            <b className="text-bttn">PHP, Node.js, Laravel, Pug, MySQL:</b>{" "}
+            Experienced with these technologies for backend development and
+            templating, though not in a professional capacity. Familiar with
+            building dynamic, data-driven applications and integrating
+            server-side logic.
+          </li>
         </ul>
       </p>
     </div>
