@@ -67,10 +67,10 @@ const Projects = () => {
       <p className="py-8 text-bckg text-left px-4 text-sm md:text-lg xl:text-lg">
         <ul>
           <li className="py-6">
-            <b className="text-bttn">React, React Native, Vue:</b> Proficient in
-            building scalable web and mobile applications using React and React
-            Native, with expertise in hooks, state management, and API
-            integration. Experienced with Vue.js for developing modular,
+            <b className="text-bttn">React, React Native, Vue, Git, Github:</b>{" "}
+            Proficient in building scalable web and mobile applications using
+            React and React Native, with expertise in hooks, state management,
+            and API integration. Experienced with Vue.js for developing modular,
             high-performing interfaces tailored to business needs.
           </li>
           <li className="py-6">
