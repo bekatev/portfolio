@@ -9,6 +9,12 @@ const data = [
     details: "NeoWeb, Germany (Remote)",
   },
   {
+    year: "2023 -",
+    title: "Front End Developer",
+    duration: "2 years",
+    details: "Freelance Developer",
+  },
+  {
     year: "2020 - 2022",
     title: "Javascript Tutor",
     duration: "2 years",
