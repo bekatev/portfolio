@@ -1,9 +1,9 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
-import spotify from "../assets/spotify.png";
-import quiz from "../assets/quiz.png";
-import straus from "../assets/straus.png";
-import magic from "../assets/magic.png";
+import rs from "../assets/rs.png";
+import ln from "../assets/ln.png";
+import fr from "../assets/fr.png";
+import wn from "../assets/wn.png";
 import caranea from "../assets/caranea.png";
 import verg from "../assets/verg.png";
 import mm from "../assets/mm.png";
@@ -26,42 +26,35 @@ const Projects = () => {
           title="LeadHub"
           link="https://www.leadhub.software/"
           language="Node/Pug/Tailwind"
-          description="I contributed to the development of Leadhub Software, a modern website built using Node.js, Pug, and Tailwind CSS. My role involved designing and implementing efficient backend solutions with Node.js, ensuring fast and scalable performance. I leveraged Pug for streamlined template rendering and Tailwind CSS to deliver a clean, responsive, and visually appealing user interface. This project enhanced my ability to integrate cutting-edge technologies to meet business requirements effectively."
+          description="Contributed to the development of Leadhub Software, a modern website built with Node.js, Pug, and Tailwind CSS. I focused on building efficient backend solutions and implementing clean, responsive UI components. This project strengthened my skills in full-stack development and scalable web architecture."
         />
         <ProjectItem
-          img={bs}
-          title="B-Social"
-          link="https://bekatev.github.io/b-social/"
-          language="React/Vite/Firebase/MUI"
-          description="B-Social is a lightweight, discussion-focused web application inspired by platforms like Reddit. It allows users to create and share topics, engage in meaningful conversations through comments, and connect over shared interests. This project showcases advanced skills in React development, Firebase integration, and Material-UI styling. It demonstrates how to build scalable, interactive, and visually appealing web applications."
+          img={fr}
+          title="FerienHaus"
+          link="https://ferienhaus-beispiel.de/"
+          language="HTML/CSS/JS"
+          description="Developed a responsive, single-page website using HTML, CSS, and JavaScript. The site showcases a vacation home with a clean layout, smooth scroll navigation, and a fully responsive design for mobile and desktop."
         />
         <ProjectItem
-          img={mm}
-          title="MyMovie"
-          link="https://bekatev.github.io/mymovie/"
-          language="React/Vite/Firebase/Tailwind"
-          description="This React app, built with Vite for speed, has a friendly interface for signing up and logging in, thanks to Firebase Authentication. I've used OMDB API to fetch the movie list. Used Firestore to handle personalized movie lists. Once in, users can search and tweak their lists, all on their profiles. It's styled with Tailwind CSS for a slick look. And it's up on Netlify, with updates from GitHub, for smooth sailing."
+          img={ln}
+          title="Landing 4"
+          link="https://bekatev.github.io/landing-4/"
+          language="Next.js/Tailwind"
+          description="Built a responsive landing page using Next.js, Tailwind CSS, and JavaScript. The project showcases a modern UI with fast performance and clean structure"
         />
         <ProjectItem
-          img={bb}
-          title="Bazaarbay"
-          link="https://bekatev.github.io/b-store-vue/"
-          language="Vue/Vite/Firebase/Tailwind"
-          description="This is a modern e-commerce web application built with Vue.js and Vite for a fast and responsive user experience. Styled with Tailwind CSS, the site offers a sleek and clean design that is fully responsive across all devices. The application integrates Firebase for authentication, database, and storage, making it highly secure and scalable."
+          img={rs}
+          title="Restaurant"
+          link="https://restaurant-beispiel.de/"
+          language="HTML/CSS/JS"
+          description="Restaurant Beispiel is a responsive static website built with HTML, CSS, and JavaScript. It features a clean layout, smooth interactions, and mobile-first design, showcasing a modern restaurant UI optimized for performance and usability."
         />
         <ProjectItem
-          img={verg}
-          title="Vergleich-mich.com"
-          link="https://vergleich-mich.com/"
-          language="HTML/CSS/JS/PHP"
-          description="This is a real project, I did for the company that I work for now. I've used HTML/CSS/JS and little bit of PHP AJAX to send mails."
-        />
-        <ProjectItem
-          img={caranea}
-          title="caranea-mail.com"
-          link="https://caranea-mail.com/"
-          language="HTML/CSS/JS/PHP"
-          description="Another real project for my company."
+          img={wn}
+          title="Weingut"
+          link="https://weingut-beispiel.de/"
+          language="HTML/CSS/JS"
+          description="Weingut Beispiel is a static website developed with HTML, CSS, and JavaScript. It presents a modern and elegant design for a vineyard, with responsive layout, smooth scrolling, and a focus on visual storytelling and user experience.."
         />
       </div>
       <p className="py-8 text-bckg text-left px-4 text-sm md:text-lg xl:text-lg">
