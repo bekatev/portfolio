@@ -54,7 +54,7 @@ const Projects = () => {
           title="Weingut"
           link="https://weingut-beispiel.de/"
           language="HTML/CSS/JS"
-          description="Weingut Beispiel is a static website developed with HTML, CSS, and JavaScript. It presents a modern and elegant design for a vineyard, with responsive layout, smooth scrolling, and a focus on visual storytelling and user experience.."
+          description="Weingut is a static website developed with HTML, CSS, and JavaScript. It presents a modern and elegant design for a vineyard, with responsive layout, smooth scrolling, and a focus on visual storytelling and user experience.."
         />
       </div>
       <p className="py-8 text-bckg text-left px-4 text-sm md:text-lg xl:text-lg">
