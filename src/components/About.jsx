@@ -7,7 +7,7 @@ const About = () => {
       className="sm:max-w-[70vw] max-w-[90vw] m-auto sm:p-12 p-8 bg-primary rounded-xl shadow-xl"
     >
       <p className="py-1 sm:py-2 text-bckg text-sm md:text-lg xl:text-lg">
-      Over the past four years, I’ve worked remotely as a front-end developer, delivering responsive, user-focused web applications. With a background in physics from the Free University of Tbilisi, I transitioned into web development early in my career, driven by a deep interest in building interactive, performant user interfaces.
+      Over the past five years, I’ve worked remotely as a front-end developer, delivering responsive, user-focused web applications. With a background in physics from the Free University of Tbilisi, I transitioned into web development early in my career, driven by a deep interest in building interactive, performant user interfaces.
 
       </p>
       <p className="py-1 sm:py-2 text-bckg text-sm md:text-lg xl:text-lg">
