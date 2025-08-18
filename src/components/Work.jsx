@@ -15,6 +15,12 @@ const data = [
     details: "Freelance Developer",
   },
   {
+    year: "2025 - 2025",
+    title: "Front End Developer",
+    duration: "1 year",
+    details: "Onchained.AI",
+  },
+  {
     year: "2020 - 2022",
     title: "Javascript Tutor",
     duration: "2 years",

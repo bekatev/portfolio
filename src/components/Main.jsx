@@ -19,7 +19,7 @@ const Main = () => {
           Hello, I'm Beka
         </h1>
         <h2 className="text-lg md:text-xl xl:text-2xl text-bckg text-center mt-2 p-1">
-          A Front-End Web Developer with 4+ Years of Experience
+          A Front-End Web Developer with 5+ Years of Experience
         </h2>
         <Lottie animationData={animationData} className="w-96" />
         <div className="flex flex-row justify-between pt-6 max-w-[500px] w-full px-4">
