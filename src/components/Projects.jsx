@@ -18,7 +18,9 @@ const Projects = () => {
     if (!el) return;
     // Nudge scroll to hint more content
     requestAnimationFrame(() => {
-      el.scrollLeft = 16;
+      const max = el.scrollWidth - el.clientWidth;
+      const nudge = Math.min(max, Math.round(el.clientWidth * 0.08));
+      el.scrollLeft = nudge;
     });
 
     const handleScroll = () => {
@@ -102,7 +104,7 @@ const Projects = () => {
             description:
               "Weingut is a static website developed with HTML, CSS, and JavaScript. It presents a modern and elegant design for a vineyard, with responsive layout, smooth scrolling, and a focus on visual storytelling and user experience..",
           }].map((p, idx) => (
-            <Reveal key={p.title} delay={idx * 80} className="min-w-[85%] sm:min-w-[60%] lg:min-w-[42%] snap-start">
+            <Reveal key={p.title} delay={idx * 80} className="min-w-[80%] sm:min-w-[55%] lg:min-w-[42%] snap-start">
               <ProjectItem
                 img={p.img}
                 title={p.title}
