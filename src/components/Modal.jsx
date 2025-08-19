@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+import { createPortal } from "react-dom";
 import { useLockBodyScroll } from "@uidotdev/usehooks";
 
 export default function Modal({ description }) {
   function ModalBox({ handleModal }) {
     useLockBodyScroll();
-    return (
+    return createPortal(
       <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4">
         <div className="absolute inset-0 bg-bckg/80 backdrop-blur-sm" onClick={handleModal} />
         <div className="relative w-full md:w-3/4 lg:w-1/2 rounded-2xl border border-white/10 bg-bckg p-6 md:p-8 shadow-2xl">
           <h2 className="text-xl md:text-2xl text-primary font-semibold">Project Info</h2>
-          <p className="mt-3 text-primary/85 text-sm md:text-base">{description}</p>
+          <p className="mt-3 text-primary/80 text-sm md:text-base">{description}</p>
           <div className="mt-6 flex justify-end">
             <button
               className="px-4 py-2 rounded-full bg-bttn text-white hover:brightness-110"
@@ -19,7 +20,8 @@ export default function Modal({ description }) {
             </button>
           </div>
         </div>
-      </div>
+      </div>,
+      document.body
     );
   }
 
