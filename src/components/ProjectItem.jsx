@@ -3,7 +3,7 @@ import Modal from "./Modal";
 
 const ProjectItem = ({ img, title, link, language, description }) => {
   return (
-    <div className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03]">
+    <div className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] snap-start">
       <a href={link} target="_blank" rel="noopener noreferrer" className="group relative block">
         <img
           src={img}
