@@ -28,7 +28,7 @@ const Main = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Crafting delightful web experiences
+                  Hello, I'm Beka
                 </motion.h1>
               </Reveal>
             </Parallax>
