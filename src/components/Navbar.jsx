@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BsSun, BsMoon } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
@@ -29,6 +29,32 @@ const Navbar = () => {
     setTheme(initial);
     applyTheme(initial);
   }, []);
+
+  // Lock body scroll when mobile menu is open
+  const prevHtmlOverflow = useRef("");
+  const prevBodyOverflow = useRef("");
+  const prevBodyTouch = useRef("");
+  useEffect(() => {
+    const htmlStyle = document.documentElement.style;
+    const bodyStyle = document.body.style;
+    if (isOpen) {
+      prevHtmlOverflow.current = htmlStyle.overflow;
+      prevBodyOverflow.current = bodyStyle.overflow;
+      prevBodyTouch.current = bodyStyle.touchAction;
+      htmlStyle.overflow = "hidden";
+      bodyStyle.overflow = "hidden";
+      bodyStyle.touchAction = "none";
+    } else {
+      htmlStyle.overflow = prevHtmlOverflow.current || "";
+      bodyStyle.overflow = prevBodyOverflow.current || "";
+      bodyStyle.touchAction = prevBodyTouch.current || "";
+    }
+    return () => {
+      htmlStyle.overflow = prevHtmlOverflow.current || "";
+      bodyStyle.overflow = prevBodyOverflow.current || "";
+      bodyStyle.touchAction = prevBodyTouch.current || "";
+    };
+  }, [isOpen]);
 
   const NavLinks = ({ onClick }) => (
     <>
@@ -72,7 +98,7 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-bckg/80 backdrop-blur-sm flex items-center justify-center"
+            className="fixed inset-0 bg-bckg/80 backdrop-blur-sm flex items-center justify-center h-[100dvh]"
           >
             <button
               aria-label="Close Menu"
