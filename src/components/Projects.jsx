@@ -39,7 +39,7 @@ const Projects = () => {
       id="projects"
       className="sm:max-w-[90vw] max-w-[96vw] m-auto px-4 md:px-0 py-12"
     >
-      <div className="relative flex items-center justify-between mb-8">
+      <div className="relative flex items-center justify-between mb-6 md:mb-8">
         <Parallax speed={0.3} className="pointer-events-none absolute -z-10 -top-10 -left-16">
           <div className="h-48 w-48 rounded-full bg-bttn/25 blur-3xl" />
         </Parallax>
@@ -47,7 +47,7 @@ const Projects = () => {
           <div className="h-40 w-40 rounded-full bg-white/12 blur-3xl" />
         </Parallax>
         <Reveal>
-          <h2 className="text-3xl md:text-4xl font-semibold text-primary">Featured Projects</h2>
+          <h2 className="text-2xl md:text-4xl font-semibold text-primary">Featured Projects</h2>
         </Reveal>
         <Reveal delay={80}>
           <a href="#contact" className="hidden md:inline-block text-sm text-primary/80 hover:text-primary">Get in touch →</a>
@@ -124,13 +124,32 @@ const Projects = () => {
           />
         </div>
       </div>
-      <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-        <h3 className="text-xl font-semibold text-primary">Skill Highlights</h3>
-        <ul className="mt-4 grid md:grid-cols-2 gap-4 text-primary/85 text-sm md:text-base">
-          <li className="p-3 rounded-lg bg-white/5">React, React Native, Vue, Git, GitHub — building scalable apps with modern tooling.</li>
-          <li className="p-3 rounded-lg bg-white/5">HTML, CSS, JavaScript — fundamentals for performant, responsive UIs.</li>
-          <li className="p-3 rounded-lg bg-white/5">Tailwind, MUI, Bootstrap — consistent, fast UI development.</li>
-          <li className="p-3 rounded-lg bg-white/5">Next.js, Node.js, PHP, Laravel, Pug, MySQL — backend and full‑stack familiarity.</li>
+      <div className="mt-12 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-6 md:p-8">
+        <div className="flex items-center justify-between">
+          <h3 className="text-xl md:text-2xl font-semibold text-primary">Skill Highlights</h3>
+          <a href="#contact" className="hidden md:inline-flex items-center gap-2 text-sm text-primary/80 hover:text-primary">Work with me →</a>
+        </div>
+        <ul className="mt-6 space-y-4">
+          <li className="rounded-xl border border-white/10 bg-white/5 p-4">
+            <p className="text-sm md:text-base text-primary/90">
+              <b className="text-bttn">React, React Native, Vue, Git, Github:</b> Proficient in building scalable web and mobile applications using React and React Native, with expertise in hooks, state management, and API integration. Experienced with Vue.js for developing modular, high-performing interfaces tailored to business needs.
+            </p>
+          </li>
+          <li className="rounded-xl border border-white/10 bg-white/5 p-4">
+            <p className="text-sm md:text-base text-primary/90">
+              <b className="text-bttn">HTML, CSS, JS:</b> Basics are very important too for structuring and styling web interfaces, ensuring optimal user experience and responsiveness across devices.
+            </p>
+          </li>
+          <li className="rounded-xl border border-white/10 bg-white/5 p-4">
+            <p className="text-sm md:text-base text-primary/90">
+              <b className="text-bttn">Tailwind, MUI & Bootstrap:</b> Leveraged these CSS frameworks to rapidly design and refine user interfaces, ensuring a consistent and modern user experience. I love Tailwind and mostly use it for everything.
+            </p>
+          </li>
+          <li className="rounded-xl border border-white/10 bg-white/5 p-4">
+            <p className="text-sm md:text-base text-primary/90">
+              <b className="text-bttn">Next.js, PHP, Node.js, Laravel, Pug, MySQL:</b> Experienced with these technologies for backend development and templating, though not in a professional capacity. Familiar with building dynamic, data-driven applications and integrating server-side logic.
+            </p>
+          </li>
         </ul>
       </div>
     </section>
