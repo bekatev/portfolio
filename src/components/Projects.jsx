@@ -5,6 +5,8 @@ import ln from "../assets/ln.png";
 import fr from "../assets/fr.png";
 import wn from "../assets/wn.png";
 import lh from "../assets/lh.png";
+import Parallax from "./Parallax";
+import Reveal from "./Reveal";
 
 const Projects = () => {
   return (
@@ -12,46 +14,66 @@ const Projects = () => {
       id="projects"
       className="sm:max-w-[90vw] max-w-[96vw] m-auto px-4 md:px-0 py-12"
     >
-      <div className="flex items-center justify-between mb-8">
-        <h2 className="text-3xl md:text-4xl font-semibold text-primary">Featured Projects</h2>
-        <a href="#contact" className="hidden md:inline-block text-sm text-primary/80 hover:text-primary">Get in touch →</a>
+      <div className="relative flex items-center justify-between mb-8">
+        <Parallax speed={0.3} className="pointer-events-none absolute -z-10 -top-10 -left-16">
+          <div className="h-48 w-48 rounded-full bg-bttn/25 blur-3xl" />
+        </Parallax>
+        <Parallax speed={0.18} className="pointer-events-none absolute -z-10 -bottom-10 right-1/4">
+          <div className="h-40 w-40 rounded-full bg-white/12 blur-3xl" />
+        </Parallax>
+        <Reveal>
+          <h2 className="text-3xl md:text-4xl font-semibold text-primary">Featured Projects</h2>
+        </Reveal>
+        <Reveal delay={80}>
+          <a href="#contact" className="hidden md:inline-block text-sm text-primary/80 hover:text-primary">Get in touch →</a>
+        </Reveal>
       </div>
       <div className="grid sm:grid-cols-2 gap-8">
-        <ProjectItem
-          img={lh}
-          title="LeadHub"
-          link="https://www.leadhub.software/"
-          language="Node/Pug/Tailwind"
-          description="Contributed to the development of Leadhub Software, a modern website built with Node.js, Pug, and Tailwind CSS. I focused on building efficient backend solutions and implementing clean, responsive UI components. This project strengthened my skills in full-stack development and scalable web architecture."
-        />
-        <ProjectItem
-          img={fr}
-          title="FerienHaus"
-          link="https://ferienhaus-beispiel.de/"
-          language="HTML/CSS/JS"
-          description="Developed a responsive, single-page website using HTML, CSS, and JavaScript. The site showcases a vacation home with a clean layout, smooth scroll navigation, and a fully responsive design for mobile and desktop."
-        />
-        <ProjectItem
-          img={ln}
-          title="Landing 4"
-          link="https://bekatev.github.io/landing-4/"
-          language="Next.js/Tailwind"
-          description="Built a responsive landing page using Next.js, Tailwind CSS, and JavaScript. The project showcases a modern UI with fast performance and clean structure"
-        />
-        <ProjectItem
-          img={rs}
-          title="Restaurant"
-          link="https://restaurant-beispiel.de/"
-          language="HTML/CSS/JS"
-          description="Restaurant Beispiel is a responsive static website built with HTML, CSS, and JavaScript. It features a clean layout, smooth interactions, and mobile-first design, showcasing a modern restaurant UI optimized for performance and usability."
-        />
-        <ProjectItem
-          img={wn}
-          title="Weingut"
-          link="https://weingut-beispiel.de/"
-          language="HTML/CSS/JS"
-          description="Weingut is a static website developed with HTML, CSS, and JavaScript. It presents a modern and elegant design for a vineyard, with responsive layout, smooth scrolling, and a focus on visual storytelling and user experience.."
-        />
+        <Reveal>
+          <ProjectItem
+            img={lh}
+            title="LeadHub"
+            link="https://www.leadhub.software/"
+            language="Node/Pug/Tailwind"
+            description="Contributed to the development of Leadhub Software, a modern website built with Node.js, Pug, and Tailwind CSS. I focused on building efficient backend solutions and implementing clean, responsive UI components. This project strengthened my skills in full-stack development and scalable web architecture."
+          />
+        </Reveal>
+        <Reveal delay={80}>
+          <ProjectItem
+            img={fr}
+            title="FerienHaus"
+            link="https://ferienhaus-beispiel.de/"
+            language="HTML/CSS/JS"
+            description="Developed a responsive, single-page website using HTML, CSS, and JavaScript. The site showcases a vacation home with a clean layout, smooth scroll navigation, and a fully responsive design for mobile and desktop."
+          />
+        </Reveal>
+        <Reveal delay={160}>
+          <ProjectItem
+            img={ln}
+            title="Landing 4"
+            link="https://bekatev.github.io/landing-4/"
+            language="Next.js/Tailwind"
+            description="Built a responsive landing page using Next.js, Tailwind CSS, and JavaScript. The project showcases a modern UI with fast performance and clean structure"
+          />
+        </Reveal>
+        <Reveal delay={240}>
+          <ProjectItem
+            img={rs}
+            title="Restaurant"
+            link="https://restaurant-beispiel.de/"
+            language="HTML/CSS/JS"
+            description="Restaurant Beispiel is a responsive static website built with HTML, CSS, and JavaScript. It features a clean layout, smooth interactions, and mobile-first design, showcasing a modern restaurant UI optimized for performance and usability."
+          />
+        </Reveal>
+        <Reveal delay={320}>
+          <ProjectItem
+            img={wn}
+            title="Weingut"
+            link="https://weingut-beispiel.de/"
+            language="HTML/CSS/JS"
+            description="Weingut is a static website developed with HTML, CSS, and JavaScript. It presents a modern and elegant design for a vineyard, with responsive layout, smooth scrolling, and a focus on visual storytelling and user experience.."
+          />
+        </Reveal>
       </div>
       <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
         <h3 className="text-xl font-semibold text-primary">Skill Highlights</h3>

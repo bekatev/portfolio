@@ -1,5 +1,7 @@
 import React from "react";
 import WorkItem from "./WorkItem";
+import Parallax from "./Parallax";
+import Reveal from "./Reveal";
 
 const data = [
   {
@@ -30,17 +32,26 @@ const data = [
 const Work = () => {
   return (
     <section id="work" className="sm:max-w-[90vw] max-w-[96vw] m-auto py-12">
-      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-10">
-        <h2 className="text-3xl md:text-4xl font-semibold text-primary text-center mb-10">Experience</h2>
+      <div className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-10 overflow-hidden">
+        <Parallax speed={0.26} className="pointer-events-none absolute -z-10 -left-16 top-4">
+          <div className="h-60 w-60 rounded-full bg-bttn/20 blur-[50px]" />
+        </Parallax>
+        <Parallax speed={0.14} className="pointer-events-none absolute -z-10 right-1/5 -bottom-10">
+          <div className="h-40 w-40 rounded-full bg-white/12 blur-3xl" />
+        </Parallax>
+        <Reveal>
+          <h2 className="text-3xl md:text-4xl font-semibold text-primary text-center mb-10">Experience</h2>
+        </Reveal>
         <div className="space-y-6">
           {data.map((item, idx) => (
-            <WorkItem
-              key={idx}
-              year={item.year}
-              title={item.title}
-              duration={item.duration}
-              details={item.details}
-            />
+            <Reveal key={idx} delay={idx * 80}>
+              <WorkItem
+                year={item.year}
+                title={item.title}
+                duration={item.duration}
+                details={item.details}
+              />
+            </Reveal>
           ))}
         </div>
       </div>
