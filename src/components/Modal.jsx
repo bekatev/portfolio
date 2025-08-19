@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 import { useLockBodyScroll } from "@uidotdev/usehooks";
-import ProjectItem from "./ProjectItem";
 
 export default function Modal({ description }) {
   function ModalBox({ handleModal }) {
     useLockBodyScroll();
     return (
-      <div className="fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[99999] bg-white rounded-xl p-5 text-center justify-center shadow-2xl border border-gray-600 md:w-9/12 w-11/12">
-        <h1 className="sm:text-xl md:text-3xl pb-4">INFO</h1>
-        <p className="sm:text-sm md:text-base text-left p-4">{description}</p>
-        <button
-          className="sm:text-lg md:text-xl bg-primary px-4 py-2 m-2 hover:bg-black hover:text-primary rounded-xl"
-          onClick={handleModal}
-        >
-          close
-        </button>
+      <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4">
+        <div className="absolute inset-0 bg-bckg/80 backdrop-blur-sm" onClick={handleModal} />
+        <div className="relative w-full md:w-3/4 lg:w-1/2 rounded-2xl border border-white/10 bg-bckg p-6 md:p-8 shadow-2xl">
+          <h2 className="text-xl md:text-2xl text-primary font-semibold">Project Info</h2>
+          <p className="mt-3 text-primary/85 text-sm md:text-base">{description}</p>
+          <div className="mt-6 flex justify-end">
+            <button
+              className="px-4 py-2 rounded-full bg-bttn text-white hover:brightness-110"
+              onClick={handleModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
@@ -23,14 +27,12 @@ export default function Modal({ description }) {
   return (
     <>
       {openModal && <ModalBox handleModal={() => setopenModal(false)} />}
-      <div className="text-left justify-left items-left">
-        <button
-          className="bg-bttn rounded-b-xl py-2 px-4 text-white hover:bg-black hover:text-primary"
-          onClick={() => setopenModal(true)}
-        >
-          More Info
-        </button>
-      </div>
+      <button
+        className="px-4 py-2 rounded-full border border-white/15 text-primary hover:bg-white/10"
+        onClick={() => setopenModal(true)}
+      >
+        More Info
+      </button>
     </>
   );
 }

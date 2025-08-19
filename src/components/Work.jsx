@@ -29,20 +29,22 @@ const data = [
 ];
 const Work = () => {
   return (
-    <div id="work" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
-      <h1 className="text-4xl font-bold text-center text-primary pb-16">
-        Job experience
-      </h1>
-      {data.map((item, idx) => (
-        <WorkItem
-          key={idx}
-          year={item.year}
-          title={item.title}
-          duration={item.duration}
-          details={item.details}
-        />
-      ))}
-    </div>
+    <section id="work" className="sm:max-w-[90vw] max-w-[96vw] m-auto py-12">
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-10">
+        <h2 className="text-3xl md:text-4xl font-semibold text-primary text-center mb-10">Experience</h2>
+        <div className="space-y-6">
+          {data.map((item, idx) => (
+            <WorkItem
+              key={idx}
+              year={item.year}
+              title={item.title}
+              duration={item.duration}
+              details={item.details}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

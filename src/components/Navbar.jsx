@@ -1,119 +1,52 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import Lottie from "lottie-react";
-import homeData from "../assets/home.json";
-import jobsData from "../assets/jobs.json";
-import projectsData from "../assets/projects.json";
-import contactData from "../assets/contact.json";
-import aboutData from "../assets/me.json";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false); // State to toggle menu open/closed
-  const handleNav = () => {
-    setNav(!nav); // Toggle the menu state
-  };
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen((prev) => !prev);
+
+  const NavLinks = ({ onClick }) => (
+    <>
+      <a href="#main" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Home</a>
+      <a href="#projects" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Projects</a>
+      <a href="#about" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">About</a>
+      <a href="#work" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Jobs</a>
+      <a href="#contact" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Contact</a>
+    </>
+  );
 
   return (
-    <div>
-      {/* Toggle Menu Button */}
-      <div
-        className="absolute top-4 right-4 z-[99] md:hidden cursor-pointer text-primary"
-        onClick={handleNav}
-      >
-        {/* Conditional Rendering of Hamburger or Close Icon */}
-        {nav ? (
-          <AiOutlineClose className="text-2xl text-bckg" /> // "X" icon when menu is open
-        ) : (
-          <AiOutlineMenu className="text-2xl text-primary" /> // Hamburger icon when menu is closed
-        )}
+    <div className="fixed top-0 left-0 right-0 z-50">
+      <div className="sm:max-w-[90vw] max-w-[96vw] mx-auto mt-4">
+        <div className="h-14 flex items-center justify-between rounded-full border border-white/10 bg-white/5 backdrop-blur px-4">
+          <a href="#main" className="text-primary font-semibold tracking-wide">Beka Tevdorashvili</a>
+          <div className="hidden md:flex items-center text-sm">
+            <NavLinks />
+          </div>
+          <button
+            aria-label="Toggle Menu"
+            className="md:hidden text-primary"
+            onClick={toggle}
+          >
+            {isOpen ? <AiOutlineClose className="text-2xl" /> : <AiOutlineMenu className="text-2xl" />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Navigation */}
-      {nav && (
-        <div className="fixed w-full h-screen bg-white/75 flex flex-col justify-center items-center z-20">
-          <a
-            onClick={handleNav}
-            href="#main"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursor-pointer transform hover:scale-110 ease-in duration-100"
+      {isOpen && (
+        <div className="fixed inset-0 bg-bckg/80 backdrop-blur-sm flex items-center justify-center">
+          <button
+            aria-label="Close Menu"
+            className="absolute top-6 right-6 text-primary"
+            onClick={toggle}
           >
-            <Lottie animationData={homeData} className="w-8" />
-            <span className="pl-4 text-bckg">Home</span>
-          </a>
-          <a
-            onClick={handleNav}
-            href="#projects"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <Lottie animationData={projectsData} className="w-8" />
-            <span className="pl-4 text-bckg">Projects</span>
-          </a>
-          <a
-            onClick={handleNav}
-            href="#about"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursor-pointer transform hover:scale-110 ease-in duration-100"
-          >
-            <Lottie animationData={aboutData} className="w-8" />
-            <span className="pl-4 text-bckg">About me</span>
-          </a>
-          <a
-            onClick={handleNav}
-            href="#work"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <Lottie animationData={jobsData} className="w-8" />
-            <span className="pl-4 text-bckg">Jobs</span>
-          </a>
-          <a
-            onClick={handleNav}
-            href="#contact"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <Lottie animationData={contactData} className="w-8" />
-            <span className="pl-4 text-bckg">Contact</span>
-          </a>
+            <AiOutlineClose className="text-3xl" />
+          </button>
+          <div className="flex flex-col items-center space-y-6 text-xl">
+            <NavLinks onClick={toggle} />
+          </div>
         </div>
       )}
-
-      {/* Desktop Navigation */}
-      <div className="md:block hidden fixed top-[25%] z-10">
-        <div className="flex flex-col">
-          <a
-            href="#main"
-            className="shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursos-pointer transform transition duration-500 hover:scale-110 flex flex-row xl:w-40 w-fit"
-          >
-            <Lottie animationData={homeData} className="w-8" />
-            <span className="pl-4 xl:block hidden text-bckg">Home</span>
-          </a>
-          <a
-            href="#projects"
-            className="shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursos-pointer transform transition duration-500 hover:scale-110 flex flex-row xl:w-40 w-fit"
-          >
-            <Lottie animationData={projectsData} className="w-8" />
-            <span className="pl-4 xl:block hidden text-bckg">Projects</span>
-          </a>
-          <a
-            href="#about"
-            className="shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursos-pointer transform transition duration-500 hover:scale-110 flex flex-row xl:w-40 w-fit"
-          >
-            <Lottie animationData={aboutData} className="w-8" />
-            <span className="pl-4 xl:block hidden text-bckg">About Me</span>
-          </a>
-          <a
-            href="#work"
-            className="shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursos-pointer transform transition duration-500 hover:scale-110 flex flex-row xl:w-40 w-fit"
-          >
-            <Lottie animationData={jobsData} className="w-8" />
-            <span className="pl-4 xl:block hidden text-bckg">Jobs</span>
-          </a>
-          <a
-            href="#contact"
-            className="shadow-lg bg-primary shadow-gray-400 m-2 p-4 cursos-pointer transform transition duration-500 hover:scale-110 flex flex-row xl:w-40 w-fit"
-          >
-            <Lottie animationData={contactData} className="w-8" />
-            <span className="pl-4 xl:block hidden text-bckg">Contact</span>
-          </a>
-        </div>
-      </div>
     </div>
   );
 };

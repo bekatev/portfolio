@@ -7,7 +7,7 @@ import About from "./components/About";
 
 function App() {
   return (
-    <div className="App bg-bckg pb-8">
+    <div className="App bg-bckg text-primary pb-20 min-h-screen">
       <Navbar />
       <Main />
       <Projects />

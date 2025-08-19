@@ -4,23 +4,19 @@ import rs from "../assets/rs.png";
 import ln from "../assets/ln.png";
 import fr from "../assets/fr.png";
 import wn from "../assets/wn.png";
-import caranea from "../assets/caranea.png";
-import verg from "../assets/verg.png";
-import mm from "../assets/mm.png";
-import bb from "../assets/bb.png";
-import bs from "../assets/bs.png";
 import lh from "../assets/lh.png";
 
 const Projects = () => {
   return (
-    <div
+    <section
       id="projects"
-      className="sm:max-w-[70vw] max-w-[90vw] m-auto p-4 bg-primary rounded-xl shadow-xl mb-20"
+      className="sm:max-w-[90vw] max-w-[96vw] m-auto px-4 md:px-0 py-12"
     >
-      <h1 className="text-4xl font-bold text-center text-bckg pb-8 pt-4">
-        My projects
-      </h1>
-      <div className="grid sm:grid-cols-2 gap-12">
+      <div className="flex items-center justify-between mb-8">
+        <h2 className="text-3xl md:text-4xl font-semibold text-primary">Featured Projects</h2>
+        <a href="#contact" className="hidden md:inline-block text-sm text-primary/80 hover:text-primary">Get in touch →</a>
+      </div>
+      <div className="grid sm:grid-cols-2 gap-8">
         <ProjectItem
           img={lh}
           title="LeadHub"
@@ -57,38 +53,16 @@ const Projects = () => {
           description="Weingut is a static website developed with HTML, CSS, and JavaScript. It presents a modern and elegant design for a vineyard, with responsive layout, smooth scrolling, and a focus on visual storytelling and user experience.."
         />
       </div>
-      <p className="py-8 text-bckg text-left px-4 text-sm md:text-lg xl:text-lg">
-        <ul>
-          <li className="py-6">
-            <b className="text-bttn">React, React Native, Vue, Git, Github:</b>{" "}
-            Proficient in building scalable web and mobile applications using
-            React and React Native, with expertise in hooks, state management,
-            and API integration. Experienced with Vue.js for developing modular,
-            high-performing interfaces tailored to business needs.
-          </li>
-          <li className="py-6">
-            <b className="text-bttn">HTML, CSS, JS:</b> Basics are very
-            important too for structuring and styling web interfaces, ensuring
-            optimal user experience and responsiveness across devices.
-          </li>
-          <li className="py-6">
-            <b className="text-bttn">Tailwind, MUI & Bootstrap:</b> Leveraged
-            these CSS frameworks to rapidly design and refine user interfaces,
-            ensuring a consistent and modern user experience. I love Tailwind
-            and mostly use it for everything.
-          </li>
-          <li className="py-6">
-            <b className="text-bttn">
-              Next.js, PHP, Node.js, Laravel, Pug, MySQL:
-            </b>{" "}
-            Experienced with these technologies for backend development and
-            templating, though not in a professional capacity. Familiar with
-            building dynamic, data-driven applications and integrating
-            server-side logic.
-          </li>
+      <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+        <h3 className="text-xl font-semibold text-primary">Skill Highlights</h3>
+        <ul className="mt-4 grid md:grid-cols-2 gap-4 text-primary/85 text-sm md:text-base">
+          <li className="p-3 rounded-lg bg-white/5">React, React Native, Vue, Git, GitHub — building scalable apps with modern tooling.</li>
+          <li className="p-3 rounded-lg bg-white/5">HTML, CSS, JavaScript — fundamentals for performant, responsive UIs.</li>
+          <li className="p-3 rounded-lg bg-white/5">Tailwind, MUI, Bootstrap — consistent, fast UI development.</li>
+          <li className="p-3 rounded-lg bg-white/5">Next.js, Node.js, PHP, Laravel, Pug, MySQL — backend and full‑stack familiarity.</li>
         </ul>
-      </p>
-    </div>
+      </div>
+    </section>
   );
 };
 

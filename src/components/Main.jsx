@@ -1,37 +1,33 @@
 import React from "react";
-import { TypeAnimation } from "react-type-animation";
-import {
-  FaTwitter,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
-import "@fontsource-variable/source-code-pro";
-import Lottie from "lottie-react";
-import animationData from "../assets/Animation1.json";
 
 const Main = () => {
   return (
-    <div id="main" className="relative">
-      <div className="w-11/12 h-screen object-cover bg-bckg" />
-      <div className="sm:max-w-[70vw] max-w-[90vw] max-h-[600px] m-auto h-full w-full bg-primary flex flex-col justify-center items-center absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 rounded-xl shadow-xl">
-        <h1 className="text-2xl md:text-4xl xl:text-5xl text-bckg text-center">
-          Hello, I'm Beka
-        </h1>
-        <h2 className="text-lg md:text-xl xl:text-2xl text-bckg text-center mt-2 p-1">
-          A Front-End Web Developer with 5+ Years of Experience
-        </h2>
-        <Lottie animationData={animationData} className="w-96" />
-        <div className="flex flex-row justify-between pt-6 max-w-[500px] w-full px-4">
-          <p className="text-bckg">
-            <b>Mobile:</b> 591242873
-          </p>
-          <p className="text-bckg">
-            <b>Email:</b> bekatevd@gmail.com
-          </p>
+    <section id="main" className="relative pt-28">
+      <div className="sm:max-w-[90vw] max-w-[96vw] mx-auto">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.03] backdrop-blur p-8 md:p-12">
+          <div className="flex flex-col items-center text-center">
+            <h1 className="text-3xl md:text-5xl xl:text-6xl text-primary/95 leading-tight">
+              Hello, I’m Beka
+            </h1>
+            <p className="mt-3 text-sm md:text-lg xl:text-xl text-primary/80 max-w-2xl">
+              Front‑End Engineer crafting fast, accessible, and delightful web experiences.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+              <a href="#projects" className="px-5 py-2 rounded-full bg-bttn text-white hover:brightness-110 transition">View Work</a>
+              <a href="#contact" className="px-5 py-2 rounded-full border border-white/20 text-primary hover:bg-white/10 transition">Contact</a>
+            </div>
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left w-full">
+              <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-primary/80"><span className="text-primary font-semibold">Location:</span> Tbilisi, Georgia</p>
+              </div>
+              <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-primary/80"><span className="text-primary font-semibold">Email:</span> bekatevd@gmail.com</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

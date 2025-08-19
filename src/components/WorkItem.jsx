@@ -2,22 +2,18 @@ import React from "react";
 
 const WorkItem = ({ year, title, duration, details }) => {
   return (
-    <div>
-      <ol className="flex flex-col md:flex-row relative border-l border-txt">
-        <li className="mb-10 ml-4">
-          <div className="absolute w-3 h-3 bg-stone-200 rounded-full mt-1.5 -left-1.5 bg-txt" />
-          <p className="flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm">
-            <span className="inline-block px-2 py-1 font-semibold text-white bg-bttn rounded-md">
-              {year}
-            </span>
-            <span className="text-lg font-semibold text-primary">{title}</span>
-            <span className="my-1 text-sm font-normal leading-none text-bttn">
-              {duration}
-            </span>
-          </p>
-          <p className="my-2 text-base text-bttn font-semibold">{details}</p>
-        </li>
-      </ol>
+    <div className="relative pl-6">
+      <div className="absolute left-0 top-2 h-2 w-2 rounded-full bg-bttn" />
+      <div className="border-l border-white/15 pl-4">
+        <p className="flex flex-wrap gap-3 items-center text-xs md:text-sm">
+          <span className="inline-block px-2 py-1 font-semibold text-white bg-bttn rounded-md">
+            {year}
+          </span>
+          <span className="text-lg font-semibold text-primary">{title}</span>
+          <span className="text-sm text-primary/70">{duration}</span>
+        </p>
+        <p className="mt-2 text-primary/85">{details}</p>
+      </div>
     </div>
   );
 };
