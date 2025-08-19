@@ -19,4 +19,3 @@ If you have any questions or feedback, feel free to reach out!
 Email: bekatev@gmail.com
 Portfolio: https://bekatev.github.io/portfolio/
 
-<img width="1506" alt="Screenshot 2024-11-28 at 16 34 34" src="https://github.com/user-attachments/assets/b496008e-61c8-4acf-8b48-cbeeee73b4f7">
