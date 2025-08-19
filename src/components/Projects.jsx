@@ -55,10 +55,10 @@ const Projects = () => {
         </Reveal>
       </div>
       {/* Horizontal, snap-based carousel */}
-      <div className="relative">
+      <div className="relative rounded-2xl">
         {/* gradient edges */}
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-bckg to-transparent z-10" />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-bckg to-transparent z-10" />
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-bckg to-transparent z-10 rounded-l-2xl" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-bckg to-transparent z-10 rounded-r-2xl" />
 
         <motion.div
           initial={{ opacity: 0, y: 6 }}
@@ -66,7 +66,7 @@ const Projects = () => {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           ref={containerRef}
-          className="no-scrollbar flex gap-6 overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-px-4 pr-4"
+          className="no-scrollbar flex gap-6 overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-px-4 pr-4 rounded-2xl"
           aria-label="Projects Carousel"
         >
           {[{
