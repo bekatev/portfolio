@@ -7,6 +7,7 @@ import wn from "../assets/wn.png";
 import lh from "../assets/lh.png";
 import Parallax from "./Parallax";
 import Reveal from "./Reveal";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const containerRef = useRef(null);
@@ -47,7 +48,7 @@ const Projects = () => {
           <div className="h-40 w-40 rounded-full bg-white/12 blur-3xl" />
         </Parallax>
         <Reveal>
-          <h2 className="text-2xl md:text-4xl font-semibold text-primary">Featured Projects</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold text-primary tracking-tight">Featured Projects</h2>
         </Reveal>
         <Reveal delay={80}>
           <a href="#contact" className="hidden md:inline-block text-sm text-primary/80 hover:text-primary">Get in touch →</a>
@@ -59,12 +60,17 @@ const Projects = () => {
         <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-bckg to-transparent z-10" />
         <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-bckg to-transparent z-10" />
 
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           ref={containerRef}
-          className="no-scrollbar flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-px-4 pr-4"
+          className="no-scrollbar flex gap-6 overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-px-4 pr-4"
           aria-label="Projects Carousel"
         >
           {[{
+            slug: "lh",
             img: lh,
             title: "LeadHub",
             link: "https://www.leadhub.software/",
@@ -73,6 +79,7 @@ const Projects = () => {
               "Contributed to the development of Leadhub Software, a modern website built with Node.js, Pug, and Tailwind CSS. I focused on building efficient backend solutions and implementing clean, responsive UI components. This project strengthened my skills in full-stack development and scalable web architecture.",
           },
           {
+            slug: "fr",
             img: fr,
             title: "FerienHaus",
             link: "https://ferienhaus-beispiel.de/",
@@ -81,6 +88,7 @@ const Projects = () => {
               "Developed a responsive, single-page website using HTML, CSS, and JavaScript. The site showcases a vacation home with a clean layout, smooth scroll navigation, and a fully responsive design for mobile and desktop.",
           },
           {
+            slug: "ln",
             img: ln,
             title: "Landing 4",
             link: "https://bekatev.github.io/landing-4/",
@@ -89,6 +97,7 @@ const Projects = () => {
               "Built a responsive landing page using Next.js, Tailwind CSS, and JavaScript. The project showcases a modern UI with fast performance and clean structure",
           },
           {
+            slug: "rs",
             img: rs,
             title: "Restaurant",
             link: "https://restaurant-beispiel.de/",
@@ -97,6 +106,7 @@ const Projects = () => {
               "Restaurant Beispiel is a responsive static website built with HTML, CSS, and JavaScript. It features a clean layout, smooth interactions, and mobile-first design, showcasing a modern restaurant UI optimized for performance and usability.",
           },
           {
+            slug: "wn",
             img: wn,
             title: "Weingut",
             link: "https://weingut-beispiel.de/",
@@ -106,6 +116,7 @@ const Projects = () => {
           }].map((p, idx) => (
             <Reveal key={p.title} delay={idx * 80} className="min-w-[80%] sm:min-w-[55%] lg:min-w-[42%] snap-start">
               <ProjectItem
+                slug={p.slug}
                 img={p.img}
                 title={p.title}
                 link={p.link}
@@ -114,10 +125,10 @@ const Projects = () => {
               />
             </Reveal>
           ))}
-        </div>
+        </motion.div>
 
         {/* Progress only */}
-        <div className="absolute right-4 -bottom-6 h-1 w-28 bg-white/10 rounded-full overflow-hidden">
+        <div className="absolute right-4 -bottom-6 h-1 w-32 bg-white/10 rounded-full overflow-hidden">
           <div
             className="h-full bg-white/40 rounded-full"
             style={{ width: `${Math.round(progress * 100)}%` }}

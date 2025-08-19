@@ -16,7 +16,7 @@ const Contact = () => {
           <div className="h-48 w-48 rounded-full bg-white/12 blur-3xl" />
         </Parallax>
         <Reveal>
-          <h2 className="text-3xl md:text-4xl font-semibold text-primary text-center">Contact</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold text-primary text-center tracking-tight">Contact</h2>
         </Reveal>
         <Reveal delay={80}>
           <p className="mt-2 text-primary/80 text-center">Have a project in mind? Let’s talk.</p>
@@ -75,7 +75,7 @@ const Contact = () => {
             />
           </Reveal>
           <Reveal delay={240}>
-            <button className="mt-6 inline-flex items-center justify-center rounded-full bg-bttn px-6 py-3 text-white hover:brightness-110">
+            <button className="mt-6 inline-flex items-center justify-center rounded-full bg-bttn px-6 py-3 text-white hover:brightness-110 magnet">
               Send message
             </button>
           </Reveal>

@@ -40,7 +40,7 @@ const Work = () => {
           <div className="h-40 w-40 rounded-full bg-white/12 blur-3xl" />
         </Parallax>
         <Reveal>
-          <h2 className="text-3xl md:text-4xl font-semibold text-primary text-center mb-10">Experience</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold text-primary text-center mb-10 tracking-tight">Experience</h2>
         </Reveal>
         <div className="space-y-6">
           {data.map((item, idx) => (

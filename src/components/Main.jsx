@@ -1,6 +1,8 @@
 import React from "react";
 import Parallax from "./Parallax";
 import Reveal from "./Reveal";
+import { motion } from "framer-motion";
+import Marquee from "./Marquee";
 
 const Main = () => {
   return (
@@ -20,23 +22,33 @@ const Main = () => {
           <div className="relative flex flex-col items-center text-center">
             <Parallax speed={0.06}>
               <Reveal>
-                <h1 className="text-3xl md:text-5xl xl:text-6xl text-primary/95 leading-tight">
-                  Hello, I’m Beka
-                </h1>
+                <motion.h1
+                  className="text-4xl md:text-6xl xl:text-7xl text-primary/95 leading-tight tracking-tight"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  Crafting delightful web experiences
+                </motion.h1>
               </Reveal>
             </Parallax>
             <Parallax speed={0.05}>
               <Reveal delay={80}>
-                <p className="mt-3 text-sm md:text-lg xl:text-xl text-primary/80 max-w-2xl">
-                  Front‑End Engineer crafting fast, accessible, and delightful web experiences.
-                </p>
+                <motion.p
+                  className="mt-4 text-base md:text-xl xl:text-2xl text-primary/80 max-w-3xl"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.08, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  Front‑End Engineer focused on speed, accessibility, and immersive motion.
+                </motion.p>
               </Reveal>
             </Parallax>
             <Parallax speed={0.04}>
               <Reveal delay={140}>
-                <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-                  <a href="#projects" className="px-5 py-2 rounded-full bg-bttn text-white hover:brightness-110 transition">View Work</a>
-                  <a href="#contact" className="px-5 py-2 rounded-full border border-white/20 text-primary hover:bg-white/10 transition">Contact</a>
+                <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+                  <motion.a whileHover={{ y: -2 }} whileTap={{ y: 0 }} href="#projects" className="magnet px-6 py-3 rounded-full bg-bttn text-white hover:brightness-110 transition">View Work</motion.a>
+                  <motion.a whileHover={{ y: -2 }} whileTap={{ y: 0 }} href="#contact" className="magnet px-6 py-3 rounded-full border border-white/20 text-primary hover:bg-white/10 transition">Contact</motion.a>
                 </div>
               </Reveal>
             </Parallax>
@@ -51,6 +63,9 @@ const Main = () => {
                   <p className="text-primary/80"><span className="text-primary font-semibold">Email:</span> bekatevd@gmail.com</p>
                 </div>
               </Reveal>
+            </div>
+            <div className="mt-10 w-full">
+              <Marquee items={["React", "Vue", "Next.js", "TypeScript", "Tailwind", "Bootstrap", "Angular", "HTML", "CSS", "JavaScript", "Git", "GitHub", "Firebase", "Node.js"]} />
             </div>
           </div>
         </div>

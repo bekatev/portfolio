@@ -16,7 +16,7 @@ const About = () => {
           <div className="h-48 w-48 rounded-full bg-bttn/15 blur-3xl" />
         </Parallax>
         <Reveal>
-          <h2 className="text-3xl md:text-4xl font-semibold text-primary mb-4">About</h2>
+          <h2 className="text-3xl md:text-5xl font-semibold text-primary mb-4 tracking-tight">About</h2>
         </Reveal>
         <Reveal>
           <p className="py-1 sm:py-2 text-primary/85 text-sm md:text-lg xl:text-lg">
