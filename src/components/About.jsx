@@ -25,37 +25,37 @@ const About = () => {
         </Reveal>
         <Reveal>
           <p className="py-1 sm:py-2 text-primary/85 text-sm md:text-lg xl:text-lg">
-            I am a web developer with over 5 years of professional experience,
-            primarily focused on front-end development. Over this time, I have
-            worked with modern frameworks and libraries such as React, Angular,
-            and Vue, as well as projects built with pure HTML, CSS, and
-            JavaScript. I have strong knowledge of JavaScript/TypeScript (ES6+)
-            and experience with state management tools such as Redux.
+            I am a web developer with more than 5 years of professional
+            expertise mainly in the front end. During this period I have been
+            involved with up-to-date frameworks and libraries like React,
+            Angular, and Vue projects pure HTML CSS and JavaScript Strong
+            knowledge in JavaScript TypeScript ES6 plus Experience using state
+            management tools such as Redux Vuex Pinia
           </p>
         </Reveal>
         <Reveal delay={120}>
           <p className="py-1 sm:py-2 text-primary/85 text-sm md:text-lg xl:text-lg">
-            I am also skilled in frameworks and libraries like Next.js for
-            server-side rendering and modern app development, and I frequently
-            use styling solutions such as Tailwind CSS, Bootstrap, and Material
-            UI. On the backend, I have practical experience with Node.js
-            (Express.js) and PHP (Laravel/vanilla PHP), giving me a solid
-            understanding of full-stack development.
+            I also have experience working with frameworks and libraries such as
+            Next.js for server-side rendering and cutting edge app development.
+            On the styling side, I often rely on solutions like Tailwind CSS,
+            Bootstrap, Material-UI, and some of my own. UI. I’m quite good on
+            the server with Node.js (Express.js) and PHP (Laravel/pure PHP), so
+            pretty familiar with full-stack development.
           </p>
         </Reveal>
         <Reveal>
           <p className="py-1 sm:py-2 text-primary/85 text-sm md:text-lg xl:text-lg">
-            I work confidently with Git and GitHub for version control,
-            collaboration, and project management, ensuring clean workflows and
-            smooth teamwork.
+            as TabNine, and I have been using Git and GitHub confidently for
+            version control, collaboration, and project management for clean
+            workflows and easy teamwork.
           </p>
         </Reveal>
         <Reveal>
           <p className="py-1 sm:py-2 text-primary/85 text-sm md:text-lg xl:text-lg">
-            In the past year, I began integrating AI-assisted coding tools such
-            as Cursor, Claude, and GPT-5 into my workflow, which has
-            significantly improved both development speed and overall
-            efficiency.
+            I started using AI-based programming tools like TabNine for such
+            purposes in the past year I have added Cursor, Claude, and GPT-5
+            into my workflow, which has significantly improved both development
+            speed and overall efficiency.
           </p>
         </Reveal>
         <Reveal>

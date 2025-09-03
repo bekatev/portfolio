@@ -106,6 +106,8 @@ const Main = () => {
                   "Vue",
                   "Next.js",
                   "Redux",
+                  "Pinia",
+                  "Vuex",
                   "TypeScript",
                   "Tailwind",
                   "Bootstrap",
