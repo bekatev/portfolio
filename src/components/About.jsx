@@ -45,9 +45,9 @@ const About = () => {
         </Reveal>
         <Reveal>
           <p className="py-1 sm:py-2 text-primary/85 text-sm md:text-lg xl:text-lg">
-            as TabNine, and I have been using Git and GitHub confidently for
-            version control, collaboration, and project management for clean
-            workflows and easy teamwork.
+            I have been using Git and GitHub confidently for version control,
+            collaboration, and project management for clean workflows and easy
+            teamwork.
           </p>
         </Reveal>
         <Reveal>
