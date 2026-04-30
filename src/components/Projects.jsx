@@ -78,7 +78,7 @@ const Projects = () => {
             description:
               "Contributed to the development of Leadhub Software, a modern website built with Node.js, Pug, and Tailwind CSS. I focused on building efficient backend solutions and implementing clean, responsive UI components. This project strengthened my skills in full-stack development and scalable web architecture.",
           },
-          {
+          /* {
             slug: "fr",
             img: fr,
             title: "FerienHaus",
@@ -86,7 +86,7 @@ const Projects = () => {
             language: "HTML/CSS/JS",
             description:
               "Developed a responsive, single-page website using HTML, CSS, and JavaScript. The site showcases a vacation home with a clean layout, smooth scroll navigation, and a fully responsive design for mobile and desktop.",
-          },
+          }, */
           {
             slug: "ln",
             img: ln,
@@ -96,7 +96,7 @@ const Projects = () => {
             description:
               "Built a responsive landing page using Next.js, Tailwind CSS, and JavaScript. The project showcases a modern UI with fast performance and clean structure",
           },
-          {
+          /* {
             slug: "rs",
             img: rs,
             title: "Restaurant",
@@ -113,7 +113,7 @@ const Projects = () => {
             language: "HTML/CSS/JS",
             description:
               "Weingut is a static website developed with HTML, CSS, and JavaScript. It presents a modern and elegant design for a vineyard, with responsive layout, smooth scrolling, and a focus on visual storytelling and user experience..",
-          }].map((p, idx) => (
+          } */].map((p, idx) => (
             <Reveal key={p.title} delay={idx * 80} className="min-w-[80%] sm:min-w-[55%] lg:min-w-[42%] snap-start">
               <ProjectItem
                 slug={p.slug}
