@@ -5,6 +5,8 @@ import ln from "../assets/ln.png";
 import fr from "../assets/fr.png";
 import wn from "../assets/wn.png";
 import lh from "../assets/lh.png";
+import cfs from "../assets/clientflow-studio.png";
+import novatech from "../assets/novatech.png";
 import Parallax from "./Parallax";
 import Reveal from "./Reveal";
 import { motion } from "framer-motion";
@@ -77,6 +79,24 @@ const Projects = () => {
             language: "Node/Pug/Tailwind",
             description:
               "Contributed to the development of Leadhub Software, a modern website built with Node.js, Pug, and Tailwind CSS. I focused on building efficient backend solutions and implementing clean, responsive UI components. This project strengthened my skills in full-stack development and scalable web architecture.",
+          },
+          {
+            slug: "clientflow-studio",
+            img: cfs,
+            title: "ClientFlow Studio",
+            link: "https://bekatev.github.io/clientflow-studio/",
+            language: "React/Tailwind",
+            description:
+              "Built ClientFlow Studio, a production-style dashboard project focused on project pipeline management, lightweight data workflows, and polished UI interactions. Developed with React and Tailwind CSS, featuring responsive layout, reusable components, and deploy-ready performance on GitHub Pages.",
+          },
+          {
+            slug: "novatech",
+            img: novatech,
+            title: "NovaTech",
+            link: "https://bekatev.github.io/NovaTech/",
+            language: "React/Tailwind",
+            description:
+              "Developed NovaTech, a modern business website focused on visual intelligence and operational technology solutions. Built with React and Tailwind CSS, featuring a clean corporate layout, responsive sections, and polished UI components optimized for both desktop and mobile experiences.",
           },
           /* {
             slug: "fr",
