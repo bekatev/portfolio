@@ -81,6 +81,15 @@ const Projects = () => {
               "Contributed to the development of Leadhub Software, a modern website built with Node.js, Pug, and Tailwind CSS. I focused on building efficient backend solutions and implementing clean, responsive UI components. This project strengthened my skills in full-stack development and scalable web architecture.",
           },
           {
+            slug: "novatech",
+            img: novatech,
+            title: "NovaTech",
+            link: "https://bekatev.github.io/NovaTech/",
+            language: "Angular/Tailwind",
+            description:
+              "Developed NovaTech, a modern business website focused on visual intelligence and operational technology solutions. Built with React and Tailwind CSS, featuring a clean corporate layout, responsive sections, and polished UI components optimized for both desktop and mobile experiences.",
+          },
+          {
             slug: "clientflow-studio",
             img: cfs,
             title: "ClientFlow Studio",
@@ -88,15 +97,6 @@ const Projects = () => {
             language: "React/Tailwind",
             description:
               "Built ClientFlow Studio, a production-style dashboard project focused on project pipeline management, lightweight data workflows, and polished UI interactions. Developed with React and Tailwind CSS, featuring responsive layout, reusable components, and deploy-ready performance on GitHub Pages.",
-          },
-          {
-            slug: "novatech",
-            img: novatech,
-            title: "NovaTech",
-            link: "https://bekatev.github.io/NovaTech/",
-            language: "React/Tailwind",
-            description:
-              "Developed NovaTech, a modern business website focused on visual intelligence and operational technology solutions. Built with React and Tailwind CSS, featuring a clean corporate layout, responsive sections, and polished UI components optimized for both desktop and mobile experiences.",
           },
           /* {
             slug: "fr",
