@@ -73,6 +73,14 @@ const Projects = () => {
           aria-label="Projects Carousel"
         >
           {[{
+            slug: "origincarpets",
+            img: origincarpets,
+            title: "OriginCarpets",
+            link: "https://origincarpets.com/",
+            language: "Next.js/NestJS/PostgreSQL",
+            description:
+              "Built OriginCarpets, a full-stack e-commerce platform for traditional carpet sales with a bilingual storefront, advanced product filtering, cart and checkout flows, and integrated payments. Developed with Next.js and Tailwind on the frontend and a NestJS API with Prisma and PostgreSQL on the backend, including domestic and international shipping, admin tooling, and production deployment on DigitalOcean.",
+          },{
             slug: "lh",
             img: lh,
             title: "LeadHub",
@@ -98,15 +106,6 @@ const Projects = () => {
             language: "React/Tailwind",
             description:
               "Built ClientFlow Studio, a production-style dashboard project focused on project pipeline management, lightweight data workflows, and polished UI interactions. Developed with React and Tailwind CSS, featuring responsive layout, reusable components, and deploy-ready performance on GitHub Pages.",
-          },
-          {
-            slug: "origincarpets",
-            img: origincarpets,
-            title: "OriginCarpets",
-            link: "https://origincarpets.com/",
-            language: "Next.js/NestJS/PostgreSQL",
-            description:
-              "Built OriginCarpets, a full-stack e-commerce platform for traditional carpet sales with a bilingual storefront, advanced product filtering, cart and checkout flows, and integrated payments. Developed with Next.js and Tailwind on the frontend and a NestJS API with Prisma and PostgreSQL on the backend, including domestic and international shipping, admin tooling, and production deployment on DigitalOcean.",
           },
           /* {
             slug: "fr",
