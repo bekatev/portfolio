@@ -187,7 +187,7 @@ const Projects = () => {
           </li>
           <li className="rounded-xl border border-white/10 bg-white/5 p-4">
             <p className="text-sm md:text-base text-primary/90">
-              <b className="text-bttn">Next.js, PHP, Node.js, Laravel, Pug, MySQL:</b> Experienced with these technologies for backend development and templating, though not in a professional capacity. Familiar with building dynamic, data-driven applications and integrating server-side logic.
+              <b className="text-bttn">Next.js, PHP, Node.js, Laravel, Pug, MySQL:</b> Strong on the backend too — building APIs, server-side logic, and database-driven applications with Next.js, Node.js, Laravel, and PHP. Comfortable integrating frontend and backend into reliable full-stack solutions, from authentication and payments to admin workflows and production deployment.
             </p>
           </li>
         </ul>
