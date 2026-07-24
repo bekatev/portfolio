@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import Modal from "./Modal";
 import Tilt from "./Tilt";
 
+// Bump when replacing files in public/optimized (those URLs are not content-hashed).
+const OPTIMIZED_CACHE_BUST = "20260724";
+
 const ProjectItem = ({ slug, img, title, link, language, description }) => {
   const [open, setOpen] = useState(false);
+  const optimizedBase = `${import.meta.env.BASE_URL}optimized/${slug}`;
   return (
     <Tilt className="group flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] snap-start hover:shadow-2xl hover:shadow-black/20 transition shine-on-hover gcard min-h-[360px]">
       <a href={link} target="_blank" rel="noopener noreferrer" className="relative block z-0">
         <div className="relative overflow-hidden rounded-t-2xl">
           <picture>
-            <source srcSet={`${import.meta.env.BASE_URL}optimized/${slug}.avif`} type="image/avif" />
-            <source srcSet={`${import.meta.env.BASE_URL}optimized/${slug}.webp`} type="image/webp" />
+            <source srcSet={`${optimizedBase}.avif?v=${OPTIMIZED_CACHE_BUST}`} type="image/avif" />
+            <source srcSet={`${optimizedBase}.webp?v=${OPTIMIZED_CACHE_BUST}`} type="image/webp" />
             <img
               src={img}
               alt={title}
