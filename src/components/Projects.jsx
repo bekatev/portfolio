@@ -111,7 +111,7 @@ const Projects = () => {
             link: "https://bekatev.github.io/landing-4/",
             language: "Next.js/Tailwind",
             description:
-              "Built a responsive marketing landing page with Next.js, Tailwind CSS, and JavaScript — focused on clean structure, fast performance, and a conversion-oriented layout across devices.",
+              "Built a responsive marketing landing page with Next.js, Tailwind CSS, and JavaScript - focused on clean structure, fast performance, and a conversion-oriented layout across devices.",
           }].map((p, idx) => (
             <Reveal key={p.title} delay={idx * 80} className="min-w-[80%] sm:min-w-[55%] lg:min-w-[42%] snap-start">
               <ProjectItem
@@ -142,7 +142,7 @@ const Projects = () => {
         <ul className="mt-6 space-y-4">
           <li className="rounded-xl border border-white/10 bg-white/5 p-4">
             <p className="text-sm md:text-base text-primary/90">
-              <b className="text-bttn">React, Vue, React Native:</b> Building scalable web and mobile interfaces with hooks, state management, reusable components, and API integration — including modular Vue applications tailored to business needs.
+              <b className="text-bttn">React, Vue, React Native:</b> Building scalable web and mobile interfaces with hooks, state management, reusable components, and API integration - including modular Vue applications tailored to business needs.
             </p>
           </li>
           <li className="rounded-xl border border-white/10 bg-white/5 p-4">
@@ -152,12 +152,12 @@ const Projects = () => {
           </li>
           <li className="rounded-xl border border-white/10 bg-white/5 p-4">
             <p className="text-sm md:text-base text-primary/90">
-              <b className="text-bttn">Tailwind, MUI & Bootstrap:</b> Rapid, consistent UI development with modern design systems — primarily Tailwind CSS for production interfaces.
+              <b className="text-bttn">Tailwind, MUI & Bootstrap:</b> Rapid, consistent UI development with modern design systems - primarily Tailwind CSS for production interfaces.
             </p>
           </li>
           <li className="rounded-xl border border-white/10 bg-white/5 p-4">
             <p className="text-sm md:text-base text-primary/90">
-              <b className="text-bttn">Next.js, Node.js, Laravel, MySQL:</b> Comfortable across the stack — APIs, server-side logic, and database-driven apps, from authentication and payments to admin workflows and production deployment.
+              <b className="text-bttn">Next.js, Node.js, Laravel, MySQL:</b> Comfortable across the stack - APIs, server-side logic, and database-driven apps, from authentication and payments to admin workflows and production deployment.
             </p>
           </li>
         </ul>
