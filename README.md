@@ -1,21 +1,17 @@
-Live Demo
-Check out the live site here: https://bekatev.github.io/portfolio/
+Live Demo: https://bekatev.github.io/portfolio/
 
 Features
-- 📱 Responsive Design: Fully optimized for mobile, tablet, and desktop views.
-- 💻 Modern UI/UX: Smooth animations and clean layouts for an engaging user experience.
-- 🛠️ Customizable Sections: Easily update project and contact information.
-- 🚀 Fast and Lightweight: Optimized for performance and speed.
+- Responsive design for mobile, tablet, and desktop
+- Modern UI with smooth motion and clean layout
+- Featured projects, experience, and contact form
+- Fast, lightweight Vite + React build
 
 Technologies Used
-- React.js: Frontend framework for a dynamic and interactive experience.
-- SCSS/CSS: Styling for responsive and beautiful designs.
-- React Router: Seamless navigation between sections.
-- GitHub Pages: Hosting for deployment.
+- React.js
+- Tailwind CSS
+- Framer Motion
+- GitHub Pages
 
 Contact
-If you have any questions or feedback, feel free to reach out!
-
-Email: bekatev@gmail.com
+Email: bekatevd@gmail.com
 Portfolio: https://bekatev.github.io/portfolio/
-

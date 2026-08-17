@@ -25,46 +25,43 @@ const About = () => {
         </Reveal>
         <Reveal>
           <p className="py-1 sm:py-2 text-primary/85 text-sm md:text-lg xl:text-lg">
-            I am a web developer with more than 5 years of professional
-            expertise mainly in the front end. During this period I have been
-            involved with up-to-date frameworks and libraries like React,
-            Angular, and Vue projects pure HTML CSS and JavaScript Strong
-            knowledge in JavaScript TypeScript ES6 plus Experience using state
-            management tools such as Redux Vuex Pinia
+            I am a full stack developer with more than 5 years of professional
+            experience building responsive, high-performance web interfaces. I
+            work confidently with HTML, CSS, JavaScript, and TypeScript, and
+            ship production UIs with React, Vue, Angular, and Next.js. I also
+            use state management tools such as Redux, Vuex, and Pinia when
+            applications need scalable client-side architecture.
           </p>
         </Reveal>
         <Reveal delay={120}>
           <p className="py-1 sm:py-2 text-primary/85 text-sm md:text-lg xl:text-lg">
-            I also have experience working with frameworks and libraries such as
-            Next.js for server-side rendering and cutting edge app development.
-            On the styling side, I often rely on solutions like Tailwind CSS,
-            Bootstrap, Material-UI, and some of my own. UI. I’m quite good on
-            the server with Node.js (Express.js) and PHP (Laravel/pure PHP), so
-            pretty familiar with full-stack development.
+            I specialize in turning Figma designs into clean, fully responsive
+            websites and landing pages. On the styling side I rely on Tailwind
+            CSS, Bootstrap, and Material UI. I also work comfortably across the
+            stack with Node.js (Express) and PHP (Laravel), which helps me
+            deliver complete, production-ready solutions.
           </p>
         </Reveal>
         <Reveal>
           <p className="py-1 sm:py-2 text-primary/85 text-sm md:text-lg xl:text-lg">
-            I have been using Git and GitHub confidently for version control,
-            collaboration, and project management for clean workflows and easy
-            teamwork.
+            I use Git and GitHub daily for version control, collaboration, and
+            clean delivery workflows with remote teams.
           </p>
         </Reveal>
         <Reveal>
           <p className="py-1 sm:py-2 text-primary/85 text-sm md:text-lg xl:text-lg">
-            I started using AI-based programming tools like TabNine for such
-            purposes in the past year I have added Cursor, Claude, and GPT-5
-            into my workflow, which has significantly improved both development
-            speed and overall efficiency.
+            Over the past year I have integrated AI-assisted development tools
+            such as Cursor, Claude, and ChatGPT into my workflow, which has
+            improved both development speed and code quality.
           </p>
         </Reveal>
         <Reveal>
           <p className="py-1 sm:py-2 text-primary/85 text-sm md:text-lg xl:text-lg">
             I have collaborated with companies and freelance clients across
-            multiple regions of the world, consistently delivering high-quality
-            results on time. I value clear communication, adaptability, and
-            reliability, and I am always motivated to meet goals and exceed
-            expectations.
+            multiple regions, consistently delivering high-quality results on
+            time. I value clear communication, adaptability, and reliability —
+            and I take ownership of front-end work from implementation through
+            launch.
           </p>
         </Reveal>
       </div>

@@ -53,7 +53,7 @@ const Main = () => {
                     ease: [0.16, 1, 0.3, 1],
                   }}
                 >
-                  The Most Motivated Developer
+                  Full Stack Developer building fast, responsive web experiences
                 </motion.p>
               </Reveal>
             </Parallax>

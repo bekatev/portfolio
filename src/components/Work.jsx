@@ -5,34 +5,40 @@ import Reveal from "./Reveal";
 
 const data = [
   {
-    year: "2020 - ",
+    year: "2020 – Present",
     title: "Front-End Developer",
-    duration: "5 years",
+    duration: "5+ years",
     details: "NeoWeb, Germany (Remote)",
   },
   {
-    year: "2025",
-    title: "Front-End Developer",
-    duration: "<1 year",
-    details: "ONVU Technologies",
+    year: "2023 – Present",
+    title: "Front-End / Full-Stack Developer",
+    duration: "Freelance",
+    details: "Independent client projects",
   },
   {
     year: "2025",
-    title: "Front-End Developer",
+    title: "Full-Stack Developer",
     duration: "<1 year",
-    details: "Onchained.AI",
+    details: "ONVU Technologies (Remote)",
   },
   {
-    year: "2024",
-    title: "Front-End Developer",
+    year: "2025",
+    title: "Full-Stack Developer",
     duration: "<1 year",
-    details: "Asia Pacific Trading",
+    details: "Onchained.AI (Remote)",
   },
   {
-    year: "2020 - 2022",
-    title: "Javascript Tutor",
+    year: "2024 – 2025",
+    title: "Full-Stack Developer",
+    duration: "<1 year",
+    details: "Asia Pacific Trading (Remote)",
+  },
+  {
+    year: "2020 – 2022",
+    title: "JavaScript Tutor",
     duration: "2 years",
-    details: "IB course, Newton’s free school",
+    details: "IB course, Newton’s Free School",
   },
 ];
 const Work = () => {

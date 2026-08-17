@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import ProjectItem from "./ProjectItem";
-import rs from "../assets/rs.png";
 import ln from "../assets/ln.png";
-import fr from "../assets/fr.png";
-import wn from "../assets/wn.png";
 import lh from "../assets/lh.png";
 import cfs from "../assets/clientflow-studio.png";
 import novatech from "../assets/novatech.png";
@@ -96,7 +93,7 @@ const Projects = () => {
             link: "https://bekatev.github.io/NovaTech/",
             language: "Angular/Tailwind",
             description:
-              "Developed NovaTech, a modern business website focused on visual intelligence and operational technology solutions. Built with React and Tailwind CSS, featuring a clean corporate layout, responsive sections, and polished UI components optimized for both desktop and mobile experiences.",
+              "Developed NovaTech, a modern business website focused on visual intelligence and operational technology solutions. Built with Angular and Tailwind CSS, featuring a clean corporate layout, responsive sections, and polished UI components optimized for both desktop and mobile experiences.",
           },
           {
             slug: "clientflow-studio",
@@ -105,44 +102,17 @@ const Projects = () => {
             link: "https://bekatev.github.io/clientflow-studio/",
             language: "React/Tailwind",
             description:
-              "Built ClientFlow Studio, a production-style dashboard project focused on project pipeline management, lightweight data workflows, and polished UI interactions. Developed with React and Tailwind CSS, featuring responsive layout, reusable components, and deploy-ready performance on GitHub Pages.",
+              "Built ClientFlow Studio, a production-style dashboard focused on project pipeline management, lightweight data workflows, and polished UI interactions. Developed with React and Tailwind CSS, with a responsive layout, reusable components, and deploy-ready performance on GitHub Pages.",
           },
-          /* {
-            slug: "fr",
-            img: fr,
-            title: "FerienHaus",
-            link: "https://ferienhaus-beispiel.de/",
-            language: "HTML/CSS/JS",
-            description:
-              "Developed a responsive, single-page website using HTML, CSS, and JavaScript. The site showcases a vacation home with a clean layout, smooth scroll navigation, and a fully responsive design for mobile and desktop.",
-          }, */
           {
             slug: "ln",
             img: ln,
-            title: "Landing 4",
+            title: "Product Landing Page",
             link: "https://bekatev.github.io/landing-4/",
             language: "Next.js/Tailwind",
             description:
-              "Built a responsive landing page using Next.js, Tailwind CSS, and JavaScript. The project showcases a modern UI with fast performance and clean structure",
-          },
-          /* {
-            slug: "rs",
-            img: rs,
-            title: "Restaurant",
-            link: "https://restaurant-beispiel.de/",
-            language: "HTML/CSS/JS",
-            description:
-              "Restaurant Beispiel is a responsive static website built with HTML, CSS, and JavaScript. It features a clean layout, smooth interactions, and mobile-first design, showcasing a modern restaurant UI optimized for performance and usability.",
-          },
-          {
-            slug: "wn",
-            img: wn,
-            title: "Weingut",
-            link: "https://weingut-beispiel.de/",
-            language: "HTML/CSS/JS",
-            description:
-              "Weingut is a static website developed with HTML, CSS, and JavaScript. It presents a modern and elegant design for a vineyard, with responsive layout, smooth scrolling, and a focus on visual storytelling and user experience..",
-          } */].map((p, idx) => (
+              "Built a responsive marketing landing page with Next.js, Tailwind CSS, and JavaScript — focused on clean structure, fast performance, and a conversion-oriented layout across devices.",
+          }].map((p, idx) => (
             <Reveal key={p.title} delay={idx * 80} className="min-w-[80%] sm:min-w-[55%] lg:min-w-[42%] snap-start">
               <ProjectItem
                 slug={p.slug}
@@ -172,22 +142,22 @@ const Projects = () => {
         <ul className="mt-6 space-y-4">
           <li className="rounded-xl border border-white/10 bg-white/5 p-4">
             <p className="text-sm md:text-base text-primary/90">
-              <b className="text-bttn">React, React Native, Vue, Git, Github:</b> Proficient in building scalable web and mobile applications using React and React Native, with expertise in hooks, state management, and API integration. Experienced with Vue.js for developing modular, high-performing interfaces tailored to business needs.
+              <b className="text-bttn">React, Vue, React Native:</b> Building scalable web and mobile interfaces with hooks, state management, reusable components, and API integration — including modular Vue applications tailored to business needs.
             </p>
           </li>
           <li className="rounded-xl border border-white/10 bg-white/5 p-4">
             <p className="text-sm md:text-base text-primary/90">
-              <b className="text-bttn">HTML, CSS, JS:</b> Basics are very important too for structuring and styling web interfaces, ensuring optimal user experience and responsiveness across devices.
+              <b className="text-bttn">HTML, CSS, JavaScript:</b> Strong foundation for semantic structure, responsive layouts, and polished interactions across desktop, tablet, and mobile.
             </p>
           </li>
           <li className="rounded-xl border border-white/10 bg-white/5 p-4">
             <p className="text-sm md:text-base text-primary/90">
-              <b className="text-bttn">Tailwind, MUI & Bootstrap:</b> Leveraged these CSS frameworks to rapidly design and refine user interfaces, ensuring a consistent and modern user experience. I love Tailwind and mostly use it for everything.
+              <b className="text-bttn">Tailwind, MUI & Bootstrap:</b> Rapid, consistent UI development with modern design systems — primarily Tailwind CSS for production interfaces.
             </p>
           </li>
           <li className="rounded-xl border border-white/10 bg-white/5 p-4">
             <p className="text-sm md:text-base text-primary/90">
-              <b className="text-bttn">Next.js, PHP, Node.js, Laravel, Pug, MySQL:</b> Strong on the backend too — building APIs, server-side logic, and database-driven applications with Next.js, Node.js, Laravel, and PHP. Comfortable integrating frontend and backend into reliable full-stack solutions, from authentication and payments to admin workflows and production deployment.
+              <b className="text-bttn">Next.js, Node.js, Laravel, MySQL:</b> Comfortable across the stack — APIs, server-side logic, and database-driven apps, from authentication and payments to admin workflows and production deployment.
             </p>
           </li>
         </ul>

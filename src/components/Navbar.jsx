@@ -61,7 +61,7 @@ const Navbar = () => {
       <a href="#main" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Home</a>
       <a href="#projects" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Projects</a>
       <a href="#about" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">About</a>
-      <a href="#work" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Jobs</a>
+      <a href="#work" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Experience</a>
       <a href="#contact" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Contact</a>
     </>
   );
