@@ -59,7 +59,7 @@ const About = () => {
           <p className="py-1 sm:py-2 text-primary/85 text-sm md:text-lg xl:text-lg">
             I have collaborated with companies and freelance clients across
             multiple regions, consistently delivering high-quality results on
-            time. I value clear communication, adaptability, and reliability —
+            time. I value clear communication, adaptability, and reliability -
             and I take ownership of front-end work from implementation through
             launch.
           </p>
