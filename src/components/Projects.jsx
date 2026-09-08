@@ -1,163 +1,172 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import ProjectItem from "./ProjectItem";
+import rs from "../assets/rs.png";
 import ln from "../assets/ln.png";
+import fr from "../assets/fr.png";
+import wn from "../assets/wn.png";
 import lh from "../assets/lh.png";
 import cfs from "../assets/clientflow-studio.png";
 import novatech from "../assets/novatech.png";
 import origincarpets from "../assets/origincarpets.png";
 import Parallax from "./Parallax";
 import Reveal from "./Reveal";
-import { motion } from "framer-motion";
+import { Asterisk, Folder } from "./Decor";
 
 const Projects = () => {
-  const containerRef = useRef(null);
-  const [progress, setProgress] = useState(0);
-  const [hintVisible, setHintVisible] = useState(false);
-
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-    // Nudge scroll to hint more content
-    requestAnimationFrame(() => {
-      const max = el.scrollWidth - el.clientWidth;
-      const nudge = Math.min(max, Math.round(el.clientWidth * 0.08));
-      el.scrollLeft = nudge;
-    });
-
-    const handleScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const value = max > 0 ? el.scrollLeft / max : 0;
-      setProgress(Math.min(1, Math.max(0, value)));
-      if (el.scrollLeft > 8 && hintVisible) setHintVisible(false);
-    };
-    handleScroll();
-    el.addEventListener("scroll", handleScroll, { passive: true });
-    return () => el.removeEventListener("scroll", handleScroll);
-  }, [hintVisible]);
+  const projects = [{
+    slug: "origincarpets",
+    img: origincarpets,
+    title: "OriginCarpets",
+    link: "https://origincarpets.com/",
+    language: "Next.js/NestJS/PostgreSQL",
+    description:
+      "Built OriginCarpets, a full-stack e-commerce platform for traditional carpet sales with a bilingual storefront, advanced product filtering, cart and checkout flows, and integrated payments. Developed with Next.js and Tailwind on the frontend and a NestJS API with Prisma and PostgreSQL on the backend, including domestic and international shipping, admin tooling, and production deployment on DigitalOcean.",
+  },
+  {
+    slug: "lh",
+    img: lh,
+    title: "LeadHub",
+    link: "https://www.leadhub.software/",
+    language: "Node/Pug/Tailwind",
+    description:
+      "Contributed to the development of Leadhub Software, a modern website built with Node.js, Pug, and Tailwind CSS. I focused on building efficient backend solutions and implementing clean, responsive UI components. This project strengthened my skills in full-stack development and scalable web architecture.",
+  },
+  {
+    slug: "novatech",
+    img: novatech,
+    title: "NovaTech",
+    link: "https://bekatev.github.io/NovaTech/",
+    language: "Angular/Tailwind",
+    description:
+      "Developed NovaTech, a modern business website focused on visual intelligence and operational technology solutions. Built with React and Tailwind CSS, featuring a clean corporate layout, responsive sections, and polished UI components optimized for both desktop and mobile experiences.",
+  },
+  {
+    slug: "clientflow-studio",
+    img: cfs,
+    title: "ClientFlow Studio",
+    link: "https://bekatev.github.io/clientflow-studio/",
+    language: "React/Tailwind",
+    description:
+      "Built ClientFlow Studio, a production-style dashboard project focused on project pipeline management, lightweight data workflows, and polished UI interactions. Developed with React and Tailwind CSS, featuring responsive layout, reusable components, and deploy-ready performance on GitHub Pages.",
+  },
+  /* {
+    slug: "fr",
+    img: fr,
+    title: "FerienHaus",
+    link: "https://ferienhaus-beispiel.de/",
+    language: "HTML/CSS/JS",
+    description:
+      "Developed a responsive, single-page website using HTML, CSS, and JavaScript. The site showcases a vacation home with a clean layout, smooth scroll navigation, and a fully responsive design for mobile and desktop.",
+  }, */
+  {
+    slug: "ln",
+    img: ln,
+    title: "Landing 4",
+    link: "https://bekatev.github.io/landing-4/",
+    language: "Next.js/Tailwind",
+    description:
+      "Built a responsive landing page using Next.js, Tailwind CSS, and JavaScript. The project showcases a modern UI with fast performance and clean structure",
+  },
+  /* {
+    slug: "rs",
+    img: rs,
+    title: "Restaurant",
+    link: "https://restaurant-beispiel.de/",
+    language: "HTML/CSS/JS",
+    description:
+      "Restaurant Beispiel is a responsive static website built with HTML, CSS, and JavaScript. It features a clean layout, smooth interactions, and mobile-first design, showcasing a modern restaurant UI optimized for performance and usability.",
+  },
+  {
+    slug: "wn",
+    img: wn,
+    title: "Weingut",
+    link: "https://weingut-beispiel.de/",
+    language: "HTML/CSS/JS",
+    description:
+      "Weingut is a static website developed with HTML, CSS, and JavaScript. It presents a modern and elegant design for a vineyard, with responsive layout, smooth scrolling, and a focus on visual storytelling and user experience..",
+  } */];
 
   return (
     <section
       id="projects"
-      className="sm:max-w-[90vw] max-w-[96vw] m-auto px-4 md:px-0 py-12"
+      className="sm:max-w-[90vw] max-w-[96vw] m-auto px-1 md:px-0 py-16 md:py-24"
     >
-      <div className="relative flex items-center justify-between mb-6 md:mb-8">
-        <Parallax speed={0.3} className="pointer-events-none absolute -z-10 -top-10 -left-16">
-          <div className="h-48 w-48 rounded-full bg-bttn/25 blur-3xl" />
+      {/* Section cover, echoing the desktop-folder motif */}
+      <div className="relative mb-14 md:mb-20">
+        <Parallax speed={0.22} className="pointer-events-none absolute left-2 -top-4 hidden md:block">
+          <Folder label="projects" rotate={-6} />
         </Parallax>
-        <Parallax speed={0.18} className="pointer-events-none absolute -z-10 -bottom-10 right-1/4">
-          <div className="h-40 w-40 rounded-full bg-white/12 blur-3xl" />
+        <Parallax speed={0.16} className="pointer-events-none absolute right-4 top-10 hidden lg:block">
+          <Folder label="case studies" rotate={5} />
         </Parallax>
-        <Reveal>
-          <h2 className="text-3xl md:text-5xl font-semibold text-primary tracking-tight">Featured Projects</h2>
-        </Reveal>
-        <Reveal delay={80}>
-          <a href="#contact" className="hidden md:inline-block text-sm text-primary/80 hover:text-primary">Get in touch →</a>
-        </Reveal>
+
+        <div className="flex flex-col items-center text-center">
+          <Reveal>
+            <h2 className="display text-[13vw] sm:text-6xl md:text-8xl xl:text-9xl text-ink">
+              featured projects
+            </h2>
+          </Reveal>
+          <Reveal delay={140}>
+            <a
+              href="#contact"
+              className="magnet mt-6 inline-flex items-center gap-2 text-ink/80 hover:text-ink"
+            >
+              Get in touch <span aria-hidden>→</span>
+            </a>
+          </Reveal>
+        </div>
+        <Asterisk className="pointer-events-none absolute right-1/4 -bottom-6 hidden h-10 w-10 text-ink/25 md:block" spin />
       </div>
-      {/* Horizontal, snap-based carousel */}
-      <div className="relative rounded-2xl">
-        {/* gradient edges */}
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-bckg to-transparent z-10 rounded-l-2xl" />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-bckg to-transparent z-10 rounded-r-2xl" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 6 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          ref={containerRef}
-          className="no-scrollbar flex gap-6 overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-px-4 pr-4 rounded-2xl"
-          aria-label="Projects Carousel"
-        >
-          {[{
-            slug: "origincarpets",
-            img: origincarpets,
-            title: "OriginCarpets",
-            link: "https://origincarpets.com/",
-            language: "Next.js/NestJS/PostgreSQL",
-            description:
-              "Built OriginCarpets, a full-stack e-commerce platform for traditional carpet sales with a bilingual storefront, advanced product filtering, cart and checkout flows, and integrated payments. Developed with Next.js and Tailwind on the frontend and a NestJS API with Prisma and PostgreSQL on the backend, including domestic and international shipping, admin tooling, and production deployment on DigitalOcean.",
-          },{
-            slug: "lh",
-            img: lh,
-            title: "LeadHub",
-            link: "https://www.leadhub.software/",
-            language: "Node/Pug/Tailwind",
-            description:
-              "Contributed to the development of Leadhub Software, a modern website built with Node.js, Pug, and Tailwind CSS. I focused on building efficient backend solutions and implementing clean, responsive UI components. This project strengthened my skills in full-stack development and scalable web architecture.",
-          },
-          {
-            slug: "novatech",
-            img: novatech,
-            title: "NovaTech",
-            link: "https://bekatev.github.io/NovaTech/",
-            language: "Angular/Tailwind",
-            description:
-              "Developed NovaTech, a modern business website focused on visual intelligence and operational technology solutions. Built with Angular and Tailwind CSS, featuring a clean corporate layout, responsive sections, and polished UI components optimized for both desktop and mobile experiences.",
-          },
-          {
-            slug: "clientflow-studio",
-            img: cfs,
-            title: "ClientFlow Studio",
-            link: "https://bekatev.github.io/clientflow-studio/",
-            language: "React/Tailwind",
-            description:
-              "Built ClientFlow Studio, a production-style dashboard focused on project pipeline management, lightweight data workflows, and polished UI interactions. Developed with React and Tailwind CSS, with a responsive layout, reusable components, and deploy-ready performance on GitHub Pages.",
-          },
-          {
-            slug: "ln",
-            img: ln,
-            title: "Product Landing Page",
-            link: "https://bekatev.github.io/landing-4/",
-            language: "Next.js/Tailwind",
-            description:
-              "Built a responsive marketing landing page with Next.js, Tailwind CSS, and JavaScript - focused on clean structure, fast performance, and a conversion-oriented layout across devices.",
-          }].map((p, idx) => (
-            <Reveal key={p.title} delay={idx * 80} className="min-w-[80%] sm:min-w-[55%] lg:min-w-[42%] snap-start">
-              <ProjectItem
-                slug={p.slug}
-                img={p.img}
-                title={p.title}
-                link={p.link}
-                language={p.language}
-                description={p.description}
-              />
-            </Reveal>
-          ))}
-        </motion.div>
-
-        {/* Progress only */}
-        <div className="absolute right-4 -bottom-6 h-1 w-32 bg-white/10 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-white/40 rounded-full"
-            style={{ width: `${Math.round(progress * 100)}%` }}
+      <div className="space-y-20 md:space-y-28">
+        {projects.map((p, idx) => (
+          <ProjectItem
+            key={p.title}
+            index={idx}
+            slug={p.slug}
+            img={p.img}
+            title={p.title}
+            link={p.link}
+            language={p.language}
+            description={p.description}
           />
-        </div>
+        ))}
       </div>
-      <div className="mt-12 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-6 md:p-8">
-        <div className="flex items-center justify-between">
-          <h3 className="text-xl md:text-2xl font-semibold text-primary">Skill Highlights</h3>
-          <a href="#contact" className="hidden md:inline-flex items-center gap-2 text-sm text-primary/80 hover:text-primary">Work with me →</a>
+
+      {/* Skill highlights */}
+      <div className="mt-24 rounded-card border-2 border-ink bg-paper p-6 md:p-10 shadow-hard">
+        <div className="flex flex-wrap items-baseline justify-between gap-4">
+          <h3 className="display text-[10vw] sm:text-4xl md:text-5xl text-ink">Skill Highlights</h3>
+          <a
+            href="#contact"
+            className="hidden md:inline-flex items-center gap-2 text-sm text-ink/70 hover:text-ink"
+          >
+            Work with me <span aria-hidden>→</span>
+          </a>
         </div>
-        <ul className="mt-6 space-y-4">
-          <li className="rounded-xl border border-white/10 bg-white/5 p-4">
-            <p className="text-sm md:text-base text-primary/90">
-              <b className="text-bttn">React, Vue, React Native:</b> Building scalable web and mobile interfaces with hooks, state management, reusable components, and API integration - including modular Vue applications tailored to business needs.
+        <ul className="mt-8 grid gap-5 md:grid-cols-2">
+          <li className="rounded-[16px] border-2 border-ink/85 bg-bckg p-5">
+            <p className="text-sm md:text-base text-ink/80">
+              <b className="block font-extrabold text-ink">React, React Native, Vue, Git, Github</b>
+              Proficient in building scalable web and mobile applications using React and React Native, with expertise in hooks, state management, and API integration. Experienced with Vue.js for developing modular, high-performing interfaces tailored to business needs.
             </p>
           </li>
-          <li className="rounded-xl border border-white/10 bg-white/5 p-4">
-            <p className="text-sm md:text-base text-primary/90">
-              <b className="text-bttn">HTML, CSS, JavaScript:</b> Strong foundation for semantic structure, responsive layouts, and polished interactions across desktop, tablet, and mobile.
+          <li className="rounded-[16px] border-2 border-ink/85 bg-bckg p-5">
+            <p className="text-sm md:text-base text-ink/80">
+              <b className="block font-extrabold text-ink">HTML, CSS, JS</b>
+              Basics are very important too for structuring and styling web interfaces, ensuring optimal user experience and responsiveness across devices.
             </p>
           </li>
-          <li className="rounded-xl border border-white/10 bg-white/5 p-4">
-            <p className="text-sm md:text-base text-primary/90">
-              <b className="text-bttn">Tailwind, MUI & Bootstrap:</b> Rapid, consistent UI development with modern design systems - primarily Tailwind CSS for production interfaces.
+          <li className="rounded-[16px] border-2 border-ink/85 bg-bckg p-5">
+            <p className="text-sm md:text-base text-ink/80">
+              <b className="block font-extrabold text-ink">Tailwind, MUI &amp; Bootstrap</b>
+              Leveraged these CSS frameworks to rapidly design and refine user interfaces, ensuring a consistent and modern user experience. I love Tailwind and mostly use it for everything.
             </p>
           </li>
-          <li className="rounded-xl border border-white/10 bg-white/5 p-4">
-            <p className="text-sm md:text-base text-primary/90">
-              <b className="text-bttn">Next.js, Node.js, Laravel, MySQL:</b> Comfortable across the stack - APIs, server-side logic, and database-driven apps, from authentication and payments to admin workflows and production deployment.
+          <li className="rounded-[16px] border-2 border-ink/85 bg-bckg p-5">
+            <p className="text-sm md:text-base text-ink/80">
+              <b className="block font-extrabold text-ink">Next.js, PHP, Node.js, Laravel, Pug, MySQL</b>
+              Strong on the backend too — building APIs, server-side logic, and database-driven applications with Next.js, Node.js, Laravel, and PHP. Comfortable integrating frontend and backend into reliable full-stack solutions, from authentication and payments to admin workflows and production deployment.
             </p>
           </li>
         </ul>

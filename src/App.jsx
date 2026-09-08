@@ -11,7 +11,7 @@ import Highlights from "./components/Highlights";
 
 function App() {
   return (
-    <div className="App bg-bckg text-primary pb-20 min-h-screen fade-in">
+    <div className="App bg-bckg text-ink pb-16 min-h-screen overflow-x-hidden fade-in">
       <Background />
       <CursorGlow />
       <ScrollProgressBar />
@@ -22,6 +22,10 @@ function App() {
       <About />
       <Work />
       <Contact />
+      <footer className="sm:max-w-[90vw] max-w-[96vw] mx-auto border-t-2 border-ink/20 pt-6 flex flex-wrap items-center justify-between gap-2">
+        <span className="eyebrow">Beka Tevdorashvili</span>
+        <span className="eyebrow">Tbilisi, Georgia</span>
+      </footer>
     </div>
   );
 }

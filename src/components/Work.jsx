@@ -2,11 +2,12 @@ import React from "react";
 import WorkItem from "./WorkItem";
 import Parallax from "./Parallax";
 import Reveal from "./Reveal";
+import { Asterisk, Folder } from "./Decor";
 
 const data = [
   {
     year: "2020 – Present",
-    title: "Front-End Developer",
+    title: "Full-Stack Developer",
     duration: "5+ years",
     details: "NeoWeb, Germany (Remote)",
   },
@@ -41,30 +42,36 @@ const data = [
     details: "IB course, Newton’s Free School",
   },
 ];
+
 const Work = () => {
   return (
-    <section id="work" className="sm:max-w-[90vw] max-w-[96vw] m-auto py-12">
-      <div className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-10 overflow-hidden">
+    <section id="work" className="sm:max-w-[90vw] max-w-[96vw] m-auto py-16 md:py-24">
+      <div className="relative rounded-card border-2 border-ink bg-paper p-6 md:p-12 shadow-hard overflow-hidden">
         <Parallax
           speed={0.26}
           className="pointer-events-none absolute -z-10 -left-16 top-4"
         >
-          <div className="h-60 w-60 rounded-full bg-bttn/20 blur-[50px]" />
+          <div className="h-60 w-60 rounded-full bg-sky/25 blur-[60px]" />
         </Parallax>
-        <Parallax
-          speed={0.14}
-          className="pointer-events-none absolute -z-10 right-1/5 -bottom-10"
-        >
-          <div className="h-40 w-40 rounded-full bg-white/12 blur-3xl" />
-        </Parallax>
-        <Reveal>
-          <h2 className="text-3xl md:text-5xl font-semibold text-primary text-center mb-10 tracking-tight">
-            Experience
-          </h2>
-        </Reveal>
-        <div className="space-y-6">
+
+        <div className="flex items-start justify-between">
+          <span className="eyebrow">experience</span>
+          <span className="eyebrow">2020 — present</span>
+        </div>
+
+        <div className="relative mt-6 flex flex-col items-center text-center">
+          <Reveal>
+            <h2 className="display text-[13vw] sm:text-6xl md:text-8xl text-ink">Experience</h2>
+          </Reveal>
+          <Parallax speed={0.18} className="pointer-events-none absolute right-0 -top-4 hidden lg:block">
+            <Folder label="cv" rotate={6} />
+          </Parallax>
+          <Asterisk className="pointer-events-none absolute left-2 top-0 hidden h-10 w-10 text-ink/20 lg:block" spin />
+        </div>
+
+        <div className="mt-10">
           {data.map((item, idx) => (
-            <Reveal key={idx} delay={idx * 80}>
+            <Reveal key={idx} delay={idx * 60}>
               <WorkItem
                 year={item.year}
                 title={item.title}

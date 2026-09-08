@@ -24,7 +24,6 @@ const Navbar = () => {
     try {
       const stored = localStorage.getItem("theme");
       if (stored === "light" || stored === "dark") initial = stored;
-      // Default to dark as requested
     } catch {}
     setTheme(initial);
     applyTheme(initial);
@@ -58,11 +57,11 @@ const Navbar = () => {
 
   const NavLinks = ({ onClick }) => (
     <>
-      <a href="#main" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Home</a>
-      <a href="#projects" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Projects</a>
-      <a href="#about" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">About</a>
-      <a href="#work" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Experience</a>
-      <a href="#contact" onClick={onClick} className="px-3 py-2 text-primary/90 hover:text-primary">Contact</a>
+      <a href="#main" onClick={onClick} className="px-3 py-2 text-ink/70 hover:text-ink transition-colors">Home</a>
+      <a href="#projects" onClick={onClick} className="px-3 py-2 text-ink/70 hover:text-ink transition-colors">Projects</a>
+      <a href="#about" onClick={onClick} className="px-3 py-2 text-ink/70 hover:text-ink transition-colors">About</a>
+      <a href="#work" onClick={onClick} className="px-3 py-2 text-ink/70 hover:text-ink transition-colors">Experience</a>
+      <a href="#contact" onClick={onClick} className="px-3 py-2 text-ink/70 hover:text-ink transition-colors">Contact</a>
     </>
   );
 
@@ -73,18 +72,24 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="h-14 flex items-center justify-between rounded-full border border-white/10 bg-white/5 backdrop-blur px-4"
+          className="h-14 flex items-center justify-between rounded-full border-2 border-ink bg-paper px-4 shadow-hard-sm"
         >
-          <a href="#main" className="text-primary font-semibold tracking-wide">Beka Tevdorashvili</a>
+          <a href="#main" className="flex items-baseline gap-2">
+            <span className="hidden sm:inline text-sm text-ink/60">Beka Tevdorashvili</span>
+          </a>
           <div className="hidden md:flex items-center text-sm">
             <NavLinks />
-            <button aria-label="Toggle theme" onClick={toggleTheme} className="ml-3 text-primary/80 hover:text-primary">
+            <button
+              aria-label="Toggle theme"
+              onClick={toggleTheme}
+              className="ml-3 grid h-9 w-9 place-items-center rounded-full border-2 border-ink text-ink hover:bg-ink hover:text-bckg transition-colors"
+            >
               {theme === "dark" ? <BsSun /> : <BsMoon />}
             </button>
           </div>
           <button
             aria-label="Toggle Menu"
-            className="md:hidden text-primary"
+            className="md:hidden text-ink"
             onClick={toggle}
           >
             {isOpen ? <AiOutlineClose className="text-2xl" /> : <AiOutlineMenu className="text-2xl" />}
@@ -98,11 +103,11 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-bckg/80 backdrop-blur-sm flex items-center justify-center h-[100dvh]"
+            className="fixed inset-0 bg-bckg flex items-center justify-center h-[100dvh]"
           >
             <button
               aria-label="Close Menu"
-              className="absolute top-6 right-6 text-primary"
+              className="absolute top-6 right-6 text-ink"
               onClick={toggle}
             >
               <AiOutlineClose className="text-3xl" />
@@ -112,10 +117,14 @@ const Navbar = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.98, opacity: 0 }}
               transition={{ type: "spring", stiffness: 220, damping: 20 }}
-              className="flex flex-col items-center space-y-6 text-xl"
+              className="flex flex-col items-center space-y-6 text-2xl display"
             >
               <NavLinks onClick={toggle} />
-              <button aria-label="Toggle theme" onClick={toggleTheme} className="mt-2 text-primary/80 hover:text-primary">
+              <button
+                aria-label="Toggle theme"
+                onClick={toggleTheme}
+                className="mt-2 grid h-11 w-11 place-items-center rounded-full border-2 border-ink text-ink"
+              >
                 {theme === "dark" ? <BsSun /> : <BsMoon />}
               </button>
             </motion.div>

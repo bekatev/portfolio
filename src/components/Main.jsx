@@ -3,60 +3,74 @@ import Parallax from "./Parallax";
 import Reveal from "./Reveal";
 import { motion } from "framer-motion";
 import Marquee from "./Marquee";
+import { Asterisk, FileThumb, Folder, Pointer } from "./Decor";
+import origincarpets from "../assets/origincarpets.png";
+import novatech from "../assets/novatech.png";
+import cfs from "../assets/clientflow-studio.png";
+import ln from "../assets/ln.png";
 
 const Main = () => {
   return (
     <section id="main" className="relative pt-28">
       <div className="sm:max-w-[90vw] max-w-[96vw] mx-auto">
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.03] backdrop-blur p-8 md:p-12">
-          {/* Parallax decorative layers */}
-          <Parallax
-            speed={0.25}
-            className="pointer-events-none absolute -top-16 -left-16"
-          >
-            <div className="h-72 w-72 rounded-full bg-bttn/30 blur-3xl" />
+        <div className="relative overflow-hidden rounded-card border-2 border-ink bg-paper px-6 py-12 md:px-12 md:py-16 shadow-hard">
+          {/* Corner labels, echoing a desktop window */}
+          <div className="relative z-10 flex items-start justify-between">
+            <span className="eyebrow">portfolio</span>
+            <span className="eyebrow">web development</span>
+          </div>
+
+          {/* Scattered desktop items, kept in the side gutters */}
+          <Parallax speed={0.12} className="pointer-events-none absolute left-4 top-28 hidden lg:block">
+            <Folder label="projects" rotate={-4} className="pointer-events-auto" href="#projects" />
           </Parallax>
-          <Parallax
-            speed={0.45}
-            className="pointer-events-none absolute -bottom-20 -right-16"
-          >
-            <div className="h-96 w-96 rounded-full bg-white/15 blur-[60px]" />
+          <Parallax speed={0.16} className="pointer-events-none absolute left-2 top-[43%] hidden xl:block">
+            <FileThumb src={cfs} alt="ClientFlow Studio" caption="clientflow.jpeg" rotate={-5} />
           </Parallax>
-          <Parallax
-            speed={0.18}
-            className="pointer-events-none absolute -top-12 right-1/4"
-          >
-            <div className="h-48 w-48 rounded-full bg-bttn/15 blur-2xl" />
+          <Parallax speed={0.22} className="pointer-events-none absolute left-8 bottom-[160px] hidden xl:block">
+            <FileThumb src={ln} alt="Landing 4" caption="landing_4.jpeg" rotate={3} />
           </Parallax>
-          <div className="relative flex flex-col items-center text-center">
+          <Parallax speed={0.2} className="pointer-events-none absolute right-4 top-32 hidden lg:block">
+            <FileThumb src={origincarpets} alt="OriginCarpets" caption="origincarpets.jpeg" rotate={3} />
+          </Parallax>
+          <Parallax speed={0.1} className="pointer-events-none absolute right-12 top-[45%] hidden xl:block">
+            <Folder label="about" rotate={5} className="pointer-events-auto" href="#about" />
+          </Parallax>
+          <Parallax speed={0.24} className="pointer-events-none absolute right-6 bottom-[160px] hidden xl:block">
+            <FileThumb src={novatech} alt="NovaTech" caption="novatech.jpeg" rotate={-4} />
+          </Parallax>
+
+          <Asterisk className="pointer-events-none absolute left-1/2 top-6 hidden h-10 w-10 -translate-x-32 text-ink/30 md:block" spin />
+
+          <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center text-center">
+            <Reveal>
+              <p className="font-script text-2xl md:text-4xl text-ink/70 -mb-2 md:-mb-5 -translate-x-8 md:-translate-x-24">
+                Hello, I&apos;m
+              </p>
+            </Reveal>
+
             <Parallax speed={0.06}>
               <Reveal>
-                <motion.h1
-                  className="text-4xl md:text-6xl xl:text-7xl text-primary/95 leading-tight tracking-tight"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  Hello, I'm Beka
-                </motion.h1>
+                <h1 className="display text-[19vw] leading-[0.85] md:text-[11rem] xl:text-[13rem] text-ink">
+                  Beka
+                </h1>
               </Reveal>
             </Parallax>
+
+            <Pointer className="hidden md:block absolute right-[26%] top-[46%] h-8 w-6 text-ink" />
+
             <Parallax speed={0.05}>
               <Reveal delay={80}>
-                <motion.p
-                  className="mt-4 text-base md:text-xl xl:text-2xl text-primary/80 max-w-3xl"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    delay: 0.08,
-                    duration: 0.7,
-                    ease: [0.16, 1, 0.3, 1],
-                  }}
-                >
-                  Full Stack Developer building fast, responsive web experiences
-                </motion.p>
+                <p className="mt-4 max-w-2xl text-base md:text-xl text-ink/75">
+                  Full-Stack Developer
+                </p>
               </Reveal>
             </Parallax>
+
+            <Reveal delay={120}>
+              <p className="mt-3 font-editorial italic text-2xl md:text-3xl text-ink/55">(2026)</p>
+            </Reveal>
+
             <Parallax speed={0.04}>
               <Reveal delay={140}>
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -64,7 +78,7 @@ const Main = () => {
                     whileHover={{ y: -2 }}
                     whileTap={{ y: 0 }}
                     href="#projects"
-                    className="magnet px-6 py-3 rounded-full bg-bttn text-white hover:brightness-110 transition"
+                    className="magnet rounded-full border-2 border-ink bg-ink px-7 py-3 text-bckg shadow-hard-sm hover:shadow-hard"
                   >
                     View Work
                   </motion.a>
@@ -72,56 +86,55 @@ const Main = () => {
                     whileHover={{ y: -2 }}
                     whileTap={{ y: 0 }}
                     href="#contact"
-                    className="magnet px-6 py-3 rounded-full border border-white/20 text-primary hover:bg-white/10 transition"
+                    className="magnet rounded-full border-2 border-ink px-7 py-3 text-ink hover:bg-ink hover:text-bckg transition-colors"
                   >
                     Contact
                   </motion.a>
                 </div>
               </Reveal>
             </Parallax>
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left w-full">
+
+            <div className="mt-10 grid w-full grid-cols-1 gap-4 text-left sm:grid-cols-2">
               <Reveal>
-                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-                  <p className="text-primary/80">
-                    <span className="text-primary font-semibold">
-                      Location:
-                    </span>{" "}
-                    Tbilisi, Georgia
-                  </p>
+                <div className="rounded-[14px] border-2 border-ink/85 bg-bckg p-4">
+                  <p className="eyebrow">Location</p>
+                  <p className="mt-1 text-ink">Tbilisi, Georgia</p>
                 </div>
               </Reveal>
               <Reveal delay={100}>
-                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-                  <p className="text-primary/80">
-                    <span className="text-primary font-semibold">Email:</span>{" "}
+                <div className="rounded-[14px] border-2 border-ink/85 bg-bckg p-4">
+                  <p className="eyebrow">Email</p>
+                  <a href="mailto:bekatevd@gmail.com" className="mt-1 block text-ink hover:underline">
                     bekatevd@gmail.com
-                  </p>
+                  </a>
                 </div>
               </Reveal>
             </div>
-            <div className="mt-10 w-full">
-              <Marquee
-                items={[
-                  "React",
-                  "Vue",
-                  "Next.js",
-                  "Redux",
-                  "Pinia",
-                  "Vuex",
-                  "TypeScript",
-                  "Tailwind",
-                  "Bootstrap",
-                  "Angular",
-                  "HTML",
-                  "CSS",
-                  "JavaScript",
-                  "Git",
-                  "GitHub",
-                  "Firebase",
-                  "Node.js",
-                ]}
-              />
-            </div>
+
+          </div>
+
+          <div className="relative z-10 mt-12 w-full border-t-2 border-dashed border-ink/25 pt-8">
+            <Marquee
+              items={[
+                "React",
+                "Vue",
+                "Next.js",
+                "Redux",
+                "Pinia",
+                "Vuex",
+                "TypeScript",
+                "Tailwind",
+                "Bootstrap",
+                "Angular",
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Git",
+                "GitHub",
+                "Firebase",
+                "Node.js",
+              ]}
+            />
           </div>
         </div>
       </div>

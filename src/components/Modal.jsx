@@ -9,19 +9,23 @@ export default function Modal({ description, open, onClose, hideTrigger = false 
     return createPortal(
       <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4" onMouseDown={(e) => e.stopPropagation()}>
         <div
-          className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          className="absolute inset-0 bg-ink/50 backdrop-blur-sm"
           onClick={(e) => {
             e.stopPropagation();
             if (Date.now() - openedAt.current < 500) return; // ignore immediate click after open
             handleModal();
           }}
         />
-        <div className="relative w-full md:w-3/4 lg:w-1/2 rounded-2xl border border-white/10 bg-bckg p-6 md:p-8 shadow-2xl animate-[modalIn_280ms_ease-out]" onMouseDown={(e) => e.stopPropagation()} onClick={(e) => e.stopPropagation()}>
-          <h2 className="text-xl md:text-2xl text-primary font-semibold">Project Info</h2>
-          <p className="mt-3 text-primary/80 text-sm md:text-base">{description}</p>
+        <div
+          className="relative w-full md:w-3/4 lg:w-1/2 rounded-card border-2 border-ink bg-paper p-6 md:p-8 shadow-hard animate-[modalIn_280ms_ease-out]"
+          onMouseDown={(e) => e.stopPropagation()}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <h2 className="display text-2xl md:text-3xl text-ink">Project Info</h2>
+          <p className="mt-3 text-ink/80 text-sm md:text-base leading-relaxed">{description}</p>
           <div className="mt-6 flex justify-end">
             <button
-              className="px-4 py-2 rounded-full bg-bttn text-white hover:brightness-110"
+              className="rounded-full border-2 border-ink bg-ink px-5 py-2 text-bckg hover:brightness-110"
               onClick={handleModal}
             >
               Close
@@ -50,7 +54,7 @@ export default function Modal({ description, open, onClose, hideTrigger = false 
       {!hideTrigger && (
         <button
           type="button"
-          className="px-4 py-2 rounded-full border border-white/15 text-primary hover:bg-white/10"
+          className="rounded-full border-2 border-ink px-5 py-2 text-ink hover:bg-ink hover:text-bckg transition-colors"
           onClick={openFn}
         >
           More Info
