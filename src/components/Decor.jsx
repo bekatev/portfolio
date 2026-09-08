@@ -60,15 +60,15 @@ export function Folder({ label, href, className = "", rotate = 0 }) {
   );
 }
 
-// Desktop "file" thumbnail: a framed screenshot.
-export function FileThumb({ src, alt, className = "", rotate = 0, href }) {
+// Desktop "file" thumbnail: framed image plus a filename caption.
+export function FileThumb({ src, alt, caption, className = "", rotate = 0, href }) {
   const Tag = href ? "a" : "div";
   return (
     <Tag
       href={href}
       target={href ? "_blank" : undefined}
       rel={href ? "noopener noreferrer" : undefined}
-      className={`group inline-flex ${className}`}
+      className={`group inline-flex flex-col items-center gap-2 ${className}`}
       style={{ transform: `rotate(${rotate}deg)` }}
     >
       <span className="block overflow-hidden rounded-[10px] border-2 border-ink bg-paper shadow-hard-sm transition-transform duration-300 group-hover:-translate-y-1">
