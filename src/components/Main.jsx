@@ -25,19 +25,19 @@ const Main = () => {
             <Folder label="projects" rotate={-4} className="pointer-events-auto" href="#projects" />
           </Parallax>
           <Parallax speed={0.16} className="pointer-events-none absolute left-2 top-[43%] hidden xl:block">
-            <FileThumb src={cfs} alt="ClientFlow Studio" caption="clientflow.jpeg" rotate={-5} />
+            <FileThumb src={cfs} alt="ClientFlow Studio" rotate={-5} />
           </Parallax>
           <Parallax speed={0.22} className="pointer-events-none absolute left-8 bottom-[160px] hidden xl:block">
-            <FileThumb src={ln} alt="Landing 4" caption="landing_4.jpeg" rotate={3} />
+            <FileThumb src={ln} alt="Landing 4" rotate={3} />
           </Parallax>
           <Parallax speed={0.2} className="pointer-events-none absolute right-4 top-32 hidden lg:block">
-            <FileThumb src={origincarpets} alt="OriginCarpets" caption="origincarpets.jpeg" rotate={3} />
+            <FileThumb src={origincarpets} alt="OriginCarpets" rotate={3} />
           </Parallax>
           <Parallax speed={0.1} className="pointer-events-none absolute right-12 top-[45%] hidden xl:block">
             <Folder label="about" rotate={5} className="pointer-events-auto" href="#about" />
           </Parallax>
           <Parallax speed={0.24} className="pointer-events-none absolute right-6 bottom-[160px] hidden xl:block">
-            <FileThumb src={novatech} alt="NovaTech" caption="novatech.jpeg" rotate={-4} />
+            <FileThumb src={novatech} alt="NovaTech" rotate={-4} />
           </Parallax>
 
           <Asterisk className="pointer-events-none absolute left-1/2 top-6 hidden h-10 w-10 -translate-x-32 text-ink/30 md:block" spin />
