@@ -1,10 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
-import { Asterisk, Sparkle } from "./Decor";
-
-// Bump when replacing files in public/optimized (those URLs are not content-hashed).
-const OPTIMIZED_CACHE_BUST = "20260908";
+import { Asterisk, OPTIMIZED_CACHE_BUST, Sparkle } from "./Decor";
 
 const ProjectItem = ({ slug, img, title, link, language, description, index = 0 }) => {
   const optimizedBase = `${import.meta.env.BASE_URL}optimized/${slug}`;

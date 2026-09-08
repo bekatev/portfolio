@@ -1,5 +1,8 @@
 import React from "react";
 
+// Bump when replacing files in public/optimized (those URLs are not content-hashed).
+export const OPTIMIZED_CACHE_BUST = "20260908";
+
 // Six-petal asterisk/flower mark used as a decorative accent.
 export function Asterisk({ className = "", spin = false }) {
   return (
@@ -60,9 +63,11 @@ export function Folder({ label, href, className = "", rotate = 0 }) {
   );
 }
 
-// Desktop "file" thumbnail: framed image plus a filename caption.
-export function FileThumb({ src, alt, caption, className = "", rotate = 0, href }) {
+// Desktop "file" thumbnail. Prefers the optimized avif/webp so the tiny tile
+// never pulls down the multi-megabyte source screenshot.
+export function FileThumb({ src, slug, alt, className = "", rotate = 0, href }) {
   const Tag = href ? "a" : "div";
+  const optimizedBase = slug ? `${import.meta.env.BASE_URL}optimized/${slug}` : null;
   return (
     <Tag
       href={href}
@@ -72,13 +77,20 @@ export function FileThumb({ src, alt, caption, className = "", rotate = 0, href 
       style={{ transform: `rotate(${rotate}deg)` }}
     >
       <span className="block overflow-hidden rounded-[10px] border-2 border-ink bg-paper shadow-hard-sm transition-transform duration-300 group-hover:-translate-y-1">
-        <img
-          src={src}
-          alt={alt}
-          loading="lazy"
-          decoding="async"
-          className="h-16 w-24 md:h-20 md:w-32 object-cover"
-        />
+        <picture>
+          {optimizedBase && (
+            <source srcSet={`${optimizedBase}.avif?v=${OPTIMIZED_CACHE_BUST}`} type="image/avif" />
+          )}
+          {optimizedBase && (
+            <source srcSet={`${optimizedBase}.webp?v=${OPTIMIZED_CACHE_BUST}`} type="image/webp" />
+          )}
+          <img
+            src={src}
+            alt={alt}
+            decoding="async"
+            className="h-16 w-24 md:h-20 md:w-32 object-cover"
+          />
+        </picture>
       </span>
     </Tag>
   );
