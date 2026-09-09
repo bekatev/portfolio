@@ -94,18 +94,26 @@ const Main = () => {
               </Reveal>
             </Parallax>
 
-            <div className="mt-10 grid w-full grid-cols-1 gap-4 text-left sm:grid-cols-2">
+            <div className="mt-10 grid w-full grid-cols-1 gap-4 text-left sm:grid-cols-3">
               <Reveal>
-                <div className="rounded-[14px] border-2 border-ink/85 bg-bckg p-4">
+                <div className="h-full rounded-[14px] border-2 border-ink/85 bg-bckg p-4">
                   <p className="eyebrow">Location</p>
                   <p className="mt-1 text-ink">Tbilisi, Georgia</p>
                 </div>
               </Reveal>
               <Reveal delay={100}>
-                <div className="rounded-[14px] border-2 border-ink/85 bg-bckg p-4">
+                <div className="h-full rounded-[14px] border-2 border-ink/85 bg-bckg p-4">
                   <p className="eyebrow">Email</p>
-                  <a href="mailto:bekatevd@gmail.com" className="mt-1 block text-ink hover:underline">
+                  <a href="mailto:bekatevd@gmail.com" className="mt-1 block break-all text-ink hover:underline">
                     bekatevd@gmail.com
+                  </a>
+                </div>
+              </Reveal>
+              <Reveal delay={200}>
+                <div className="h-full rounded-[14px] border-2 border-ink/85 bg-bckg p-4">
+                  <p className="eyebrow">Phone</p>
+                  <a href="tel:+995591242873" className="mt-1 block text-ink hover:underline">
+                    +995 591 24 28 73
                   </a>
                 </div>
               </Reveal>
